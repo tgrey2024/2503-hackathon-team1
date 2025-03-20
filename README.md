@@ -1,4 +1,4 @@
-# Project Title - Here
+# Project Title
 
 ## User Experience
 
