@@ -39,7 +39,16 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'tailwind',
+    'theme',
+    'django_browser_reload',
     'home',
+]
+
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
 ]
 
 SITE_ID = 1
@@ -71,6 +80,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
     'allauth.account.middleware.AccountMiddleware',
 ]
 
@@ -92,6 +102,8 @@ TEMPLATES = [
         },
     },
 ]
+
+NPM_BIN_PATH = 'npm.cmd'
 
 WSGI_APPLICATION = 'project_root.wsgi.application'
 
