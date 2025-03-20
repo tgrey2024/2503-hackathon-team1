@@ -4,7 +4,6 @@ import os
 from pathlib import Path
 
 import dj_database_url
-from django.contrib.messages import constants as messages
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -56,19 +55,6 @@ SITE_ID = 1
 # Redirects after login/logout to the homepage "/"
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-
-# Django Crispy Forms settings
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
-
-# Maps alert message to Bootstrap CSS classes.
-MESSAGE_TAGS = {
-    messages.DEBUG: 'debug',
-    messages.INFO: 'info',
-    messages.SUCCESS: 'success',
-    messages.WARNING: 'warning',
-    messages.ERROR: 'danger',
-}
 
 # Middleware settings
 MIDDLEWARE = [
