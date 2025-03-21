@@ -89,7 +89,8 @@ TEMPLATES = [
     },
 ]
 
-NPM_BIN_PATH = 'npm.cmd'
+NPM_BIN_PATH = "/home/gitpod/.nvm/versions/node/v22.13.1/bin/npm"
+
 
 WSGI_APPLICATION = 'project_root.wsgi.application'
 
