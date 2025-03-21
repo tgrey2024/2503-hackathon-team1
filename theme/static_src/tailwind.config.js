@@ -7,6 +7,7 @@
 
 module.exports = {
     content: [
+        './node_modules/flyonui/dist/js/*.js',
         /**
          * HTML. Paths to Django template files that will contain Tailwind CSS classes.
          */
@@ -53,5 +54,7 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
+        require("flyonui"),
+        require("flyonui/plugin"),
     ],
 }
