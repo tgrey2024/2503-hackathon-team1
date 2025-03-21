@@ -90,7 +90,10 @@ TEMPLATES = [
     },
 ]
 
-NPM_BIN_PATH = 'npm.cmd'
+if 'DEV' in os.environ:
+    NPM_BIN_PATH = 'npm.cmd'
+else:
+    NPM_BIN_PATH = 'npm'
 
 WSGI_APPLICATION = 'project_root.wsgi.application'
 
