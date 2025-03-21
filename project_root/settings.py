@@ -5,6 +5,8 @@ from pathlib import Path
 
 import dj_database_url
 from dotenv import load_dotenv
+from django.templatetags.static import static
+from django.utils.translation import gettext_lazy as _
 
 # Load environment variables from .env file
 load_dotenv()
@@ -48,7 +50,7 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'home',
     'timeline',
-    ]
+]
 
 TAILWIND_APP_NAME = 'theme'
 
@@ -165,3 +167,59 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Unfold Admin Configuration
+UNFOLD = {
+    "SITE_TITLE": "Team-1 Admin",
+    "SITE_HEADER": "Team-1 Dashboard",
+    "SITE_SUBHEADER": "Control Center",
+    "SITE_URL": "/",
+    "SITE_SYMBOL": "timeline",
+    "ENVIRONMENT": lambda _: ["Development" if 'DEV' in os.environ else "Production",
+                                   "info" if 'DEV' in os.environ else "danger"],
+    "SHOW_HISTORY": True,
+    "SHOW_VIEW_ON_SITE": True,
+    "SHOW_BACK_BUTTON": True,
+    "THEME": "dark",
+    "BORDER_RADIUS": "4px",
+    "STYLES": [
+        lambda _: static("css/admin.css"),
+    ],
+    "COLORS": {
+        "primary": {
+            "50": "240 249 255",
+            "100": "224 242 254",
+            "200": "186 230 253",
+            "300": "125 211 252",
+            "400": "56 189 248",
+            "500": "14 165 233",
+            "600": "2 132 199",
+            "700": "3 105 161",
+            "800": "7 89 133",
+            "900": "12 74 110",
+            "950": "8 47 73",
+        },
+    },
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": True,
+        "navigation": [
+            {
+                "title": _("Dashboard"),
+                "separator": True,
+                "items": [
+                    {
+                        "title": _("Timeline Entries"),
+                        "icon": "event",
+                        "link": "/admin/timeline/timeline/",
+                    },
+                    {
+                        "title": _("Users"),
+                        "icon": "people",
+                        "link": "/admin/auth/user/",
+                    },
+                ],
+            },
+        ],
+    },
+}
