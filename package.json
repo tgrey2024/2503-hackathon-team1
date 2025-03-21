@@ -4,5 +4,13 @@
   "engines": {
     "node": "22.x",
     "npm": "11.x"
-  }
+  },
+  "scripts": {
+    "build": "cd theme/static_src && npm install --production=false && npm run build",
+    "postinstall": "npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "cacheDirectories": [
+    "theme/static_src/node_modules"
+  ]
 }
