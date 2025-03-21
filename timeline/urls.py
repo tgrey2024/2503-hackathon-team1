@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import timeline_view
+from . import views
 
 urlpatterns = [
-    path('', timeline_view, name='timeline'),
+    path('', views.timeline, name='timeline'),
 ]

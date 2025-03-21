@@ -1,6 +1,6 @@
-from django.urls import path
-from .views import timeline_view
+from django.apps import AppConfig
 
-urlpatterns = [
-    path('', timeline_view, name='timeline'),
-]
+
+class TimelineConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'timeline'

@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Timeline
 
-def timeline_view(request):
-    return render(request, "timeline/timeline.html")
+def timeline(request):
+    events = Timeline.objects.all().order_by('year')
+    return render(request, 'timeline/timeline.html', {'events': events})
