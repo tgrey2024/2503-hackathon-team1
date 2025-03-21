@@ -172,7 +172,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 UNFOLD = {
     "SITE_TITLE": "Team-1 Admin",
     "SITE_HEADER": "Team-1 Dashboard",
-    "SITE_SUBHEADER": "Control Center",
     "SITE_URL": "/",
     "SITE_SYMBOL": "timeline",
     "ENVIRONMENT": lambda _: ["Development" if 'DEV' in os.environ else "Production",
