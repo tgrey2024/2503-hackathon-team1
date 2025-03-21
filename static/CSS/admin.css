@@ -1,0 +1,17 @@
+/* Custom style for admin Panel */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  background-color: #1f2937 !important;
+  border-radius: 2px !important;
+  padding: 0.25em !important;
+  color: white !important;
+}
