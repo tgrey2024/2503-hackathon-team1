@@ -12,8 +12,8 @@
     {% for event in events %}
     <li{% if forloop.counter|divisibleby:2 %} class="timeline-shift"{% endif %}>
         <div class="timeline-middle h-16">
-            <span class="/20 flex size-8 items-center justify-center rounded-full">
-                <span class="icon-[tabler--school] text-black-700 size-20"></span>
+            <span class="flex size-8 items-center justify-center">
+                <span class="icon-[tabler--school] text-black-700 size-5"></span>
             </span>
         </div>
         {% if forloop.counter|divisibleby:2 %}
@@ -27,7 +27,7 @@
         </div>
         <div class="timeline-end ms-4 mb-8">
         {% endif %}
-            <div class="card sm:card-side max-w-sm sm:max-w-full">
+            <div class="card">
                 <div class="card-body gap-2">
                     <!--Image -->
                     {% if event.image %}
