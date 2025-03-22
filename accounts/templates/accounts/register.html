@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Register{% endblock title %}
+
+{% block content %}
+<!-- Retro Windows 98 CSS -->
+<link rel="stylesheet" href="https://unpkg.com/98.css/dist/98.css" />
+
+<div class="window mx-auto" style="max-width: 400px; margin-top: 2rem;">
+  <div class="title-bar">
+    <div class="title-bar-text">Register an Account</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body" style="padding: 1rem;">
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="field-row" style="margin-top: 1rem;">
+        <button type="submit" class="btn">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}
