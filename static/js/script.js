@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Update count
-        const countElem = button.querySelector(".honour-count text-black");
+        const countElem = button.querySelector(".honour-count");
         if (countElem) {
           countElem.textContent = data.honour_count;
         }
