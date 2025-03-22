@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.contrib.admin import ModelAdmin
+from unfold.admin import ModelAdmin
 from import_export.admin import ImportExportMixin
 from .models import Timeline, Honour
 
