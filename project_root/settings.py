@@ -174,8 +174,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Unfold Admin Configuration
 UNFOLD = {
-    "SITE_TITLE": "Team-1 Admin",
-    "SITE_HEADER": "Team-1 Dashboard",
+    "SITE_TITLE": "404: Gender Gap Not Found Admin",
+    "SITE_HEADER": "404: Gender Gap Not Found Dashboard",
     "SITE_URL": "/",
     "SITE_SYMBOL": "timeline",
     "ENVIRONMENT": lambda _: ["Development" if 'DEV' in os.environ else "Production",
