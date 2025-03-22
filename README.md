@@ -26,7 +26,19 @@ Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c
 ### Wireframes
 Based on the user stories, we used Balsamiq to design the wireframes for the main UI, starting with mobile first.
 
-<!-- Add wireframes -->
+<details>
+  <summary>Mobile devices</summary>
+    Here are the wireframes for mobile devices:
+</details>
+<details>
+  <summary>iPad screens</summary>
+    Here are the wireframes for tablets and iPads:
+</details>
+<details>
+  <summary>Laptop and larger screens</summary>
+    Here are the wireframes for larger screens and laptops:
+
+</details>
 
 ## Agile Methodology
 
@@ -71,10 +83,16 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 ## Technologies And Languages
 
 ### Languages Used
-<!-- Add content for Languages Used here -->
+HTML5 - for content and structure on the site.
+CSS - for styling the site.
+Python - provides functionality for the site.
+Django - as the Python framework for the site.
+Javascript - for interactive and dynamic elements of the site.
 
-### Technologies and Programs
-Django, CSS, JavaScript, Python, HTML, Tailwind
+### Frameworks and Libraries
+Django
+Tailwind CSS - for responsive design
+FlyonUI - for styling timeline, etc.
 
 ## Deployment
 The web app is hosted on Heroku using Eco Dynos, and is deployed via the designated Github repository.
@@ -88,9 +106,10 @@ The deployment process is as follows:
 6. In Heroku, create a new app using a unique name and select the correct region. 
 7. Add Config Vars in Settings.
 8. Go to Deploy tab, search for the correct Github repo and **Deploy Branch**.
-9. **View app** to verify that it is been deployed correctly. This deployed site can now be validated and tested e.g. in Chrome Dev Tools.
-10. In the app's Resources tab, check that Eco Dynos are used and remove any unnecessary Add-ons.
-11. Subsequent changes to the code will need to be pushed to the Github repo and deployed on Heroku.
+9. Choose **Automatic Deploy**.
+10. **View app** to verify that it is been deployed correctly. This deployed site can now be validated and tested e.g. in Chrome Dev Tools.
+11. In the app's Resources tab, check that Eco Dynos are used and remove any unnecessary Add-ons.
+12. Subsequent changes to the code will need to be pushed to the Github repo and deployed on Heroku.
 
 ### Creating A Fork
 <!-- Add content for Creating A Fork here -->
