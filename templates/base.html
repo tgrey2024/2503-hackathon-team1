@@ -14,7 +14,7 @@
 <body class="bg-gray-500 min-h-screen {% if user.is_authenticated %}user-logged-in{% endif %}">
     
   <header>
-    <nav class="navbar rounded-box shadow">
+    <nav class="navbar bg-[#000080] text-white border-t border-gray-300 shadow-md px-6 py-4 font-mono text-sm"">
       <div class="w-full md:flex md:items-center md:gap-2">
         <div class="flex items-center justify-between">
           <div class="navbar-start items-center justify-between max-md:w-full">
@@ -27,30 +27,25 @@
             </div>
           </div>
         </div>
-        <div id="default-navbar-collapse" class="md:navbar-end collapse hidden grow basis-full overflow-hidden transition-[height] duration-300 max-md:w-full" >
-          <ul class="menu md:menu-horizontal gap-2 p-0 text-base max-md:mt-2">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+        <div id="navbar bg-[#000080]-collapse" class="md:navbar-end collapse hidden grow basis-full overflow-hidden transition-[height] duration-300 max-md:w-full" >
+          <ul class="menu md:menu-horizontal gap-4 px-8 text-base max-md:mt-2">
+            <li><a href="#">Home</a></li><br>
+            <li><a href="#">About</a></li><br>
             <li><a href="#">Login</a></li>
           </ul>
         </div>
       </div>
     </nav>
-  </header>
-  
+  </header> 
+
+
   <main>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
             {% block content %}{% endblock %}
         </div>
     </main>
 
-    <!-- <footer class="bg-blue-300 border-t border-blue-500 p-4 text-center text-xs font-mono shadow-md w-full">
-      <div class="bg-blue-200 border border-gray-500 p-2 inline-block shadow-inner">
-        <p class="text-white">
-          Copyright &copy; 404 Gender Gap Not Found - Since 1900 - All rights reserved.
-        </p>
-      </div>
-    </footer> -->
+
     <footer class="footer footer-center bg-[#000080] text-white border-t border-gray-300 shadow-md px-6 py-4 font-mono text-sm">
       <aside>
         <p>Copyright &copy; 404 Gender Gap Not Found - Since 1900 - All rights reserved.</p>
