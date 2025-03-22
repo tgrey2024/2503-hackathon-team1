@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Update heart icon
         const iconElement = button.querySelector("span:first-child");
         if (data.honoured) {
-          iconElement.className = "icon-[tabler--heart-filled] size-5";
+          iconElement.className = "icon-[tabler--mug-filled] size-5";
         } else {
-          iconElement.className = "icon-[tabler--heart] size-5";
+          iconElement.className = "icon-[tabler--mug] size-5";
         }
 
         // Update count
