@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'home',
     'timeline',
-    'accounts',
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -62,7 +61,11 @@ INTERNAL_IPS = [
 
 SITE_ID = 1
 
-# Redirects after login/logout to the homepage "/"
+# Allauth settings
+ACCOUNT_LOGIN_METHODS = {'username'}
+ACCOUNT_SIGNUP_FIELDS = ['username*', 'password1*', 'password2*']
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
@@ -126,7 +129,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.herokuapp.com',
 ]
 
-# Authentication backend settings
+# Allauth configuration
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
