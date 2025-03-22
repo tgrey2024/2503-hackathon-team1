@@ -3,10 +3,12 @@
 import os
 from pathlib import Path
 
+import cloudinary
 import dj_database_url
 from dotenv import load_dotenv
 from django.templatetags.static import static
 from django.utils.translation import gettext_lazy as _
+from django.urls import reverse_lazy
 
 # Load environment variables from .env file
 load_dotenv()
@@ -39,9 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary_storage',
-    'django.contrib.sites',
     'cloudinary',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -152,6 +153,13 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
+# Cloudinary Configuration
+cloudinary.config(
+    cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
+    api_key=os.getenv('CLOUDINARY_API_KEY'),
+    api_secret=os.getenv('CLOUDINARY_API_SECRET'),
+)
+
 # Static files (CSS, JavaScript, images)
 STATIC_URL = '/static/'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' (Uncomment this line for production)
@@ -159,11 +167,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
-
-# Cloudinary settings
-CLOUDINARY_STORAGE = {'CLOUDINARY_URL': os.getenv('CLOUDINARY_URL')}
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -210,12 +213,12 @@ UNFOLD = {
                     {
                         "title": _("Timeline Entries"),
                         "icon": "event",
-                        "link": "/admin/timeline/timeline/",
+                        "link": reverse_lazy("admin:timeline_timeline_changelist"),
                     },
                     {
                         "title": _("Users"),
                         "icon": "people",
-                        "link": "/admin/auth/user/",
+                        "link": reverse_lazy("admin:auth_user_changelist"),
                     },
                 ],
             },
