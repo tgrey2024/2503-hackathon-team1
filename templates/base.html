@@ -11,7 +11,7 @@
     {% block extra_css %}{% endblock %}
 
 </head>
-<body class="bg-gray-500 min-h-screen">
+<body class="bg-gray-500 min-h-screen {% if user.is_authenticated %}user-logged-in{% endif %}">
     <main>
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
             {% block content %}{% endblock %}
@@ -19,7 +19,7 @@
     </main>
     {% block javascript %}
     <script src="{% static 'js/script.js' %}"></script>
-    <script src="../node_modules/flyonui/flyonui.js"></script>
+    <script src="{% static 'js/flyonui.js' %}"></script>
     {% endblock %}
 </body>
 </html>
