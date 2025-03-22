@@ -42,13 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // Update heart icon
         const iconElement = button.querySelector("span:first-child");
         if (data.honoured) {
-          iconElement.className = "icon-[tabler--mug-filled] size-5";
+          iconElement.className = "icon-[tabler--mug-filled] size-5 text-black";
         } else {
-          iconElement.className = "icon-[tabler--mug] size-5";
+          iconElement.className = "icon-[tabler--mug] size-5 text-black";
         }
 
         // Update count
-        const countElem = button.querySelector(".honour-count");
+        const countElem = button.querySelector(".honour-count text-black");
         if (countElem) {
           countElem.textContent = data.honour_count;
         }
