@@ -38,7 +38,7 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
 <details>
   <summary>Mobile devices</summary>
     Here are the wireframes for mobile devices:
-    
+
 </details>
 <details>
   <summary>iPad screens</summary>
@@ -60,24 +60,24 @@ We also used it during testing to log any significant bugs that need to be fixed
 ### User Stories
 Here are all the user stories that have been prioritised for the current implementation:
 
-| User Stories                                    | MoSCoW priority           |  Status |
-|:----------------------------------------------- |:-------------------------:|:-------:|
-| User-Friendly Navigation and Responsive Design  | must have                 |   Done  |
-| Display Timeline View | must have                 |   Done  |
-| Header and Footer  | must have                 |   Done  |
-| User Authentication  | must have                 |   Done  |
-| Connect with Mentors  | must have                 |   Done  |
-| Team page  | must have                 |   Done  |
-| Custom Error Pages  | should have                 |   Done  |
+| User Stories                                   | MoSCoW priority | Status |
+| :--------------------------------------------- | :-------------: | :----: |
+| User-Friendly Navigation and Responsive Design |    must have    |  Done  |
+| Display Timeline View                          |    must have    |  Done  |
+| Header and Footer                              |    must have    |  Done  |
+| User Authentication                            |    must have    |  Done  |
+| Connect with Mentors                           |    must have    |  Done  |
+| Team page                                      |    must have    |  Done  |
+| Custom Error Pages                             |   should have   |  Done  |
 
 <!-- add main user stories -->
 
 ## Features
 
-### Header 
+### Header
 
 ### Footer
-![Footer](documentation\wireframes\footer.png)
+![Footer](documentation/footer.png)
 * The footer is styled with a dark blue background (#000080), white text, and a subtle border on top.
 
 * The text is centered, and the font is set to a monospace style (font-mono), with a small size (text-sm).
@@ -152,7 +152,7 @@ The deployment process is as follows:
 3. Install web server gunicorn and freeze requirements.
 4. Create a new Procfile in the root directory and specify the running of the web app with process type as gunicorn in the Procfile.
 5. Add deployed apps to ALLOWED_HOSTS in settings.py, and set Debug = False. Add, commit and push to the Github repo.
-6. In Heroku, create a new app using a unique name and select the correct region. 
+6. In Heroku, create a new app using a unique name and select the correct region.
 7. Add Config Vars in Settings.
 8. Go to Deploy tab, search for the correct Github repo and **Deploy Branch**.
 9. Choose **Automatic Deploy**.
@@ -171,7 +171,7 @@ The deployment process is as follows:
 Forking allows you to make any changes without affecting original project. You can send the suggestions over by submitting pull request. Project owner can review the pull request before accepting the suggestions and merging them.
 
 
-For more details on how to fork the repo, in order to for example suggest any changes to the project you can visit: 
+For more details on how to fork the repo, in order to for example suggest any changes to the project you can visit:
 https://docs.github.com/en/get-started/quickstart/fork-a-repo
 
 When you have fork to a repository you don't have access to files locally on your device, for this you will need to clone the forked repo.
@@ -186,7 +186,7 @@ When you have fork to a repository you don't have access to files locally on you
 6. Type git clone, and then paste the URL you copied earlier
 7. Press enter to create local Clone
 
-For more details on how to clone the remote repo in order to create a local copy for own use, please go to 
+For more details on how to clone the remote repo in order to create a local copy for own use, please go to
 https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 ## Credits
