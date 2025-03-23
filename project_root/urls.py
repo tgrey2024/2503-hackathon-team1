@@ -13,4 +13,6 @@ urlpatterns = [
     path('', include('home.urls')),
     path('timeline/', timeline, name='timeline'),
     path('mentors/', include('mentors.urls')),
+    path('', include('home.urls')),
+    path('timeline/', include('timeline.urls')),
 ]
