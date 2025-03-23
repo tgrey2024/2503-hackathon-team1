@@ -48,12 +48,13 @@
             {% for member in members %}
             <div class="bg-white border-2 border-black p-4">
                 {% if member.image %}
-                <img src="{% static member.image %}" alt="{{ member.name }}" class="h-40 border border-black mb-4">
+                <img src="{% static member.image %}" alt="{{ member.name }}" class="border border-black h-40 w-40 object-cover mb-4">
+                {% else %}
                 {% endif %}
                 <h3 class="text-xl font-bold">{{ member.name }}</h3>
                 <p class="text-gray-700 font-semibold">{{ member.role }}</p>
                 <p class="mt-2 text-sm">{{ member.bio }}</p>
-                
+
                 <!-- GitHub Link -->
                 {% if member.github %}
                 <p class="mt-5 flex justify-around">
