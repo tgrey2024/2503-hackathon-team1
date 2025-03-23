@@ -18,11 +18,11 @@
             <!-- Image if available -->
             {% if event.image %}
             <div class="card-image w-full">
-                <img src="{{ event.image.url }}" alt="{{ event.event }}" class="h-72 border border-black">
+                <img src="{{ event.image.url }}" alt="{{ event.event }}" class="h-60 object-cover border border-black">
             </div>
             {% endif %}
             <!-- Title -->
-            <h1 class="text-3xl font-bold my-3 text-black">{{ event.event }}</h1>
+            <h5 class="my-3 card-title text-black">{{ event.event }}</h5>
             <!-- Full description -->
             <div class="mb-6">
                 <h2 class="text-xl font-semibold mb-2 text-black">Description</h2>
