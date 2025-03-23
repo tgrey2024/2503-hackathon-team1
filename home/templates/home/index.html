@@ -18,25 +18,85 @@
     <div class="md:w-1/2 flex flex-col">
         <h2 class="text-2xl font-bold mb-4">Timeline Events</h2>
         
-        {% if timeline_events %}
-            <ul class="space-y-4">
-                {% for event in timeline_events %}
-                    <li class="border p-4 rounded-lg shadow">
-                        <h3 class="font-semibold text-lg">{{ event.event }}</h3>
-                        <div class="text-sm text-gray-500">{{ event.year|date:"Y" }}</div>
-                        <p class="mt-2">{{ event.description }}</p>
-                        {% if event.image %}
-                            <img src="{{ event.image.url }}" alt="{{ event.event }}" class="h-40 border border-black">
-                        {% endif %}
-                    </li>
-                {% empty %}
-                    <li>No events found in the loop.</li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No timeline events available. (Timeline_events is empty or None)</p>
-        {% endif %}
+        {% for event in timeline_events %}
+        <li class="border p-4 rounded-lg shadow">
+            <h3 class="font-semibold text-lg">{{ event.event }}</h3>
+            <div class="text-sm text-gray-500">{{ event.year }}</div>
+            <p class="mt-2">{{ event.description }}</p>
+            {% if event.image %}
+                <img src="{{ event.image.url }}" alt="{{ event.event }}" class="h-40 border border-black mt-2">
+            {% endif %}
+            
+            <!-- Add honour button -->
+            {% if user.is_authenticated %}
+                <div class="mt-3 flex items-center">
+                    <button 
+                        class="honour-btn flex items-center space-x-1 text-sm {% if event.user_has_honoured %}text-red-500{% else %}text-gray-500{% endif %}"
+                        data-timeline-id="{{ event.id }}"
+                        data-csrf-token="{{ csrf_token }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="{% if event.user_has_honoured %}currentColor{% else %}none{% endif %}" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                        <span class="honour-count">{{ event.honour_count }}</span>
+                    </button>
+                </div>
+            {% else %}
+                <div class="mt-3 flex items-center text-sm text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <span>{{ event.honour_count }}</span>
+                </div>
+            {% endif %}
+        </li>
+    {% empty %}
+        <li>No events found in the loop.</li>
+    {% endfor %}
     </div>
 </div>
 
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const honourButtons = document.querySelectorAll('.honour-btn');
+    
+    honourButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const timelineId = this.dataset.timelineId;
+            const csrfToken = this.dataset.csrfToken;
+            
+            fetch(`/timeline/${timelineId}/honour/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken,
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'same-origin'
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update the button appearance
+                const svg = this.querySelector('svg');
+                const countSpan = this.querySelector('.honour-count');
+                
+                if (data.honoured) {
+                    this.classList.remove('text-gray-500');
+                    this.classList.add('text-red-500');
+                    svg.setAttribute('fill', 'currentColor');
+                } else {
+                    this.classList.remove('text-red-500');
+                    this.classList.add('text-gray-500');
+                    svg.setAttribute('fill', 'none');
+                }
+                
+                // Update the count
+                countSpan.textContent = data.honour_count;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    });
+});
+</script>
 {% endblock %}
