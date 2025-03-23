@@ -77,7 +77,7 @@ Here are all the user stories that have been prioritised for the current impleme
 ### Header 
 
 ### Footer
-![Footer](./static/images/footer.png)
+![Footer](documentation\wireframes\footer.png)
 * The footer is styled with a dark blue background (#000080), white text, and a subtle border on top.
 
 * The text is centered, and the font is set to a monospace style (font-mono), with a small size (text-sm).
