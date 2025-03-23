@@ -9,3 +9,11 @@ def home(request):
         'timeline_events': timeline_events
     }
     return render(request, 'home/index.html')
+
+
+def index(request):
+    return render(request, 'home/index.html')
+
+
+def about(request):
+    return render(request, 'home/about.html')
