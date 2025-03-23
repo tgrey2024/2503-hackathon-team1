@@ -1,20 +1,19 @@
-from django.test import TestCase, Client
-from django.urls import reverse
 from django.contrib.auth.models import User
-from .models import Timeline, Honour
+from django.test import Client, TestCase
+from django.urls import reverse
+
+from .models import Honour, Timeline
+
 
 class TimelineHonourTests(TestCase):
     def setUp(self):
         # Set up test user, timeline entry, and client
         self.user = User.objects.create_user(
-            username='testuser',
-            password='testpassword'
+            username='testuser', password='testpassword'
         )
 
         self.timeline = Timeline.objects.create(
-            event='Test Event',
-            description='Test Description',
-            year=2023
+            event='Test Event', description='Test Description', year=2023
         )
 
         self.client = Client()
@@ -58,8 +57,7 @@ class TimelineHonourTests(TestCase):
 
         # Add second user's honour independently
         user2 = User.objects.create_user(
-            username='testuser2',
-            password='testpassword'
+            username='testuser2', password='testpassword'
         )
         Honour.objects.create(user=user2, timeline=self.timeline)
 

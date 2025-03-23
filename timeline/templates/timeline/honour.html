@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ event.event }} - Timeline Detail{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto bg-white border-2 border-black rounded-lg shadow-lg overflow-hidden">
+        <!-- Back button and year on the same row -->
+<div class="p-4 border-b border-black flex justify-between items-center">
+    <a href="{% url 'timeline:timeline' %}" class="btn btn-sm btn-outline rounded-none inline-flex items-center">
+        <span class="icon-[tabler--arrow-left] size-4 mr-1 text-black"></span>
+        <span class="text-black">Back to Timeline</span>
+    </a>
+    <div class="text-black-700 text-xl font-bold">{{ event.year }}</div>
+</div>
+        <div class="p-6">
+            <!-- Image if available -->
+            {% if event.image %}
+            <div class="card-image w-full">
+                <img src="{{ event.image.url }}" alt="{{ event.event }}" class="h-60 object-cover border border-black">
+            </div>
+            {% endif %}
+            <!-- Title -->
+            <h5 class="my-3 card-title text-black">{{ event.event }}</h5>
+            <!-- Full description -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold mb-2 text-black">Description</h2>
+                <p class="text-black whitespace-pre-line">{{ event.description }}</p>
+            </div>
+            <!-- Honour button -->
+            <div class="honour-container flex items-center space-x-2 mt-4">
+                <button class="honour-btn btn btn-outline rounded-none"
+                        data-timeline-id="{{ event.id }}"
+                        data-honour-count="{{ event.honour_count }}">
+                    <!-- Heart icon: filled if honoured -->
+                    {% if event.user_has_honoured %}
+                    <span class="icon-[tabler--heart-filled] size-5"></span>
+                    {% else %}
+                    <span class="icon-[tabler--heart] size-5"></span>
+                    {% endif %}
+                    <span class="honour-count ml-1">{{ event.honour_count }}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

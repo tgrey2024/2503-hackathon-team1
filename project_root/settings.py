@@ -5,10 +5,10 @@ from pathlib import Path
 
 import cloudinary
 import dj_database_url
-from dotenv import load_dotenv
 from django.templatetags.static import static
-from django.utils.translation import gettext_lazy as _
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
+from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
@@ -51,18 +51,22 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'home',
     'timeline',
-    'accounts',
+    'mentors',
 ]
 
 TAILWIND_APP_NAME = 'theme'
 
 INTERNAL_IPS = [
-    "127.0.0.1",
+    '127.0.0.1',
 ]
 
 SITE_ID = 1
 
-# Redirects after login/logout to the homepage "/"
+# Allauth settings
+ACCOUNT_LOGIN_METHODS = {'username'}
+ACCOUNT_SIGNUP_FIELDS = ['username*', 'password1*', 'password2*']
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
@@ -76,7 +80,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 ]
 
@@ -126,7 +130,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.herokuapp.com',
 ]
 
-# Authentication backend settings
+# Allauth configuration
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -174,52 +178,56 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Unfold Admin Configuration
 UNFOLD = {
-    "SITE_TITLE": "404: Gender Gap Not Found Admin",
-    "SITE_HEADER": "404: Gender Gap Not Found Dashboard",
-    "SITE_URL": "/",
-    "SITE_SYMBOL": "timeline",
-    "ENVIRONMENT": lambda _: ["Development" if 'DEV' in os.environ else "Production",
-                                   "info" if 'DEV' in os.environ else "danger"],
-    "SHOW_HISTORY": True,
-    "SHOW_VIEW_ON_SITE": True,
-    "SHOW_BACK_BUTTON": True,
-    "THEME": "dark",
-    "BORDER_RADIUS": "4px",
-    "STYLES": [
-        lambda _: static("css/admin.css"),
+    'SITE_TITLE': '404: Gender Gap Not Found Admin',
+    'SITE_HEADER': '404: Gender Gap Not Found Dashboard',
+    'SITE_URL': '/',
+    'SITE_SYMBOL': 'timeline',
+    'ENVIRONMENT': lambda _: [
+        'Development' if 'DEV' in os.environ else 'Production',
+        'info' if 'DEV' in os.environ else 'danger',
     ],
-    "COLORS": {
-        "primary": {
-            "50": "240 249 255",
-            "100": "224 242 254",
-            "200": "186 230 253",
-            "300": "125 211 252",
-            "400": "56 189 248",
-            "500": "14 165 233",
-            "600": "2 132 199",
-            "700": "3 105 161",
-            "800": "7 89 133",
-            "900": "12 74 110",
-            "950": "8 47 73",
+    'SHOW_HISTORY': True,
+    'SHOW_VIEW_ON_SITE': True,
+    'SHOW_BACK_BUTTON': True,
+    'THEME': 'dark',
+    'BORDER_RADIUS': '4px',
+    'STYLES': [
+        lambda _: static('css/admin.css'),
+    ],
+    'COLORS': {
+        'primary': {
+            '50': '240 249 255',
+            '100': '224 242 254',
+            '200': '186 230 253',
+            '300': '125 211 252',
+            '400': '56 189 248',
+            '500': '14 165 233',
+            '600': '2 132 199',
+            '700': '3 105 161',
+            '800': '7 89 133',
+            '900': '12 74 110',
+            '950': '8 47 73',
         },
     },
-    "SIDEBAR": {
-        "show_search": True,
-        "show_all_applications": True,
-        "navigation": [
+    'SIDEBAR': {
+        'show_search': True,
+        'show_all_applications': True,
+        'navigation': [
             {
-                "title": _("Dashboard"),
-                "separator": True,
-                "items": [
+                'title': _('Dashboard'),
+                'separator': True,
+                'items': [
                     {
-                        "title": _("Timeline Entries"),
-                        "icon": "event",
-                        "link": reverse_lazy("admin:timeline_timeline_changelist"),
+                        'title': _('Timeline Entries'),
+                        'icon': 'event',
+                        'link': reverse_lazy(
+                            'admin:timeline_timeline_changelist'
+                        ),
                     },
                     {
-                        "title": _("Users"),
-                        "icon": "people",
-                        "link": reverse_lazy("admin:auth_user_changelist"),
+                        'title': _('Users'),
+                        'icon': 'people',
+                        'link': reverse_lazy('admin:auth_user_changelist'),
                     },
                 ],
             },
