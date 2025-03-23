@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Request Submitted{% endblock %}
+
+{% block content %}
+<div class="container mx-auto py-8">
+    <div class="max-w-xl mx-auto">
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Success</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body p-6 text-center">
+                <div class="mb-4">
+                    <span class="icon-[tabler--check] text-green-500 size-16"></span>
+                </div>
+                <h2 class="text-2xl font-bold mb-4">Your request has been submitted!</h2>
+                <p class="mb-6">We've received your mentor connection request. A mentor will review your request and get back to you soon.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="{% url 'mentors:mentor_list' %}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300">
+                        Back to Mentors
+                    </a>
+                    <a href="{% url 'home' %}" class="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition duration-300">
+                        Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
