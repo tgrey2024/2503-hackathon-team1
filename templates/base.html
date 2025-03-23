@@ -20,8 +20,9 @@
           <img src="{% static 'images/logo.webp' %}" alt="Hackathon Logo" class="h-8 w-auto mr-2">
         </a>
       </div>
-      <!-- Navigation Links in separate boxes -->
-      <nav class="flex space-x-4">
+  
+      <!-- Horizontal Nav (hidden on mobile, shown on md+) -->
+      <nav class="hidden md:flex space-x-4">
         <a href="{% url 'home' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Home</a>
         <a href="{% url 'about' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">About Us</a>
         <a href="{% url 'timeline' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Timeline</a>
@@ -34,8 +35,36 @@
           <a href="{% url 'account_signup' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Register</a>
         {% endif %}
       </nav>
+  
+      <!-- Mobile Menu Button + Dropdown (shown on mobile, hidden on md+) -->
+      <div class="md:hidden relative">
+        <!-- Burger button -->
+        <button id="navbar-burger" class="focus:outline-none" aria-label="Open Menu">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+  
+        <!-- Dropdown menu -->
+        <div id="navbar-dropdown"
+             class="hidden absolute right-0 mt-2 w-48 bg-white text-black border border-gray-200 rounded-md shadow-lg">
+          <a href="{% url 'home' %}" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+          <a href="{% url 'about' %}" class="block px-4 py-2 hover:bg-gray-100">About Us</a>
+          <a href="{% url 'timeline' %}" class="block px-4 py-2 hover:bg-gray-100">Timeline</a>
+          {% if user.is_authenticated %}
+            <a href="{% url 'account_logout' %}" class="block px-4 py-2 hover:bg-gray-100">Logout</a>
+            <a href="{% url 'account_change_password' %}" class="block px-4 py-2 hover:bg-gray-100">Change Password</a>
+          {% else %}
+            <a href="{% url 'account_login' %}" class="block px-4 py-2 hover:bg-gray-100">Login</a>
+            <a href="{% url 'account_signup' %}" class="block px-4 py-2 hover:bg-gray-100">Register</a>
+          {% endif %}
+        </div>
+      </div>
     </div>
   </header>
+  
+  
   <!-- Main Content Area -->
   <main class="flex-1 bg-gray-100">
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
@@ -48,8 +77,19 @@
     </aside>
   </footer>
   {% block javascript %}
-    <script src="{% static 'js/script.js' %}"></script>
-    <script src="{% static 'js/flyonui.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/flyonui.js' %}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const burgerBtn = document.getElementById('navbar-burger');
+      const dropdown = document.getElementById('navbar-dropdown');
+  
+      burgerBtn.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden');
+      });
+    });
+  </script>
   {% endblock %}
+  
 </body>
 </html>
