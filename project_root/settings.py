@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'home',
     'timeline',
+    'mentors',
 ]
 
 TAILWIND_APP_NAME = 'theme'

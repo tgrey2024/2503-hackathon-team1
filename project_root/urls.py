@@ -10,4 +10,5 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
     path('', include('home.urls')),
     path('timeline/', timeline, name='timeline'),
+    path('mentors/', include('mentors.urls')),
 ]
