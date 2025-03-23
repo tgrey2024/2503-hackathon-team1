@@ -31,18 +31,21 @@
                         <img src="{{ event.image.url }}" alt="{{ event.event }}" class="h-40 border border-black">
                     </div>
                     {% endif %}
-
                     <!--Title -->
                     <h5 class="card-title mb-2.5 text-black">{{ event.event }}</h5>
-
                     <!--Description-->
-                    <p class="text-black">{{ event.description }}</p>
-
+                    <p class="text-black">{{ event.description|truncatechars:100 }}</p>
+                    <!--Read more button-->
+                    <div class="mt-2">
+                        <a href="{% url 'timeline:event_detail' event.id %}" class="btn btn-sm btn-outline rounded-none">
+                            <span class="text-black">Read More</span>
+                        </a>
+                    </div>
                     <!--Honour button-->
                     <div class="honour-container flex justify-start mt-2">
-                        <button class="honour-btn btn btn-ghost btn-sm bg-transparent rounded-none {% if event.user_has_honoured %}honoured{% endif %}"
-                                data-timeline-id="{{ event.id }}"
-                                data-honour-count="{{ event.honour_count }}">
+                        <button class="honour-btn btn btn-sm btn-outline bg-transparent rounded-none"
+                            data-timeline-id="{{ event.id }}"
+                            data-honour-count="{{ event.honour_count }}">
                             <!-- Heart icon: filled if honoured -->
                             {% if event.user_has_honoured %}
                             <span class="icon-[tabler--heart-filled] size-5"></span>
