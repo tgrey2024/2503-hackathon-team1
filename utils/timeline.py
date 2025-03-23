@@ -7,10 +7,11 @@ def get_timeline_events():
 
 def mark_user_honoured_events(events, user):
     """Mark events that have been honoured by the user"""
-    if user.is_authenticated:
+    if user.is_authenticated and hasattr(user, 'honours') and hasattr(user.honours, 'values_list'):
         honoured_ids = set(user.honours.values_list('timeline_id', flat=True))
-        for event in events:
-            event.user_has_honoured = event.id in honoured_ids
+        if events and hasattr(events, '__iter__'):
+            for event in events:
+                event.user_has_honoured = event.id in honoured_ids
     return events
 
 def toggle_event_honour(timeline, user):
@@ -29,3 +30,4 @@ def toggle_event_honour(timeline, user):
         'honoured': honoured,
         'honour_count': honour_count
     }
+    

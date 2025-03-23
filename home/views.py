@@ -1,14 +1,17 @@
 from django.shortcuts import render
-from timeline.models import Timeline
+from utils.timeline import get_timeline_events, mark_user_honoured_events
 
-def home(request):
-    # Get ALL timeline events, sorted by year
-    timeline_events = Timeline.objects.all().order_by('-year')
+def index(request):
+    """Display the home page with timeline events"""
+    # Get timeline events using the utility function
+    timeline_events = get_timeline_events()
     
-    context = {
+    # Mark events that the current user has honoured
+    timeline_events = mark_user_honoured_events(timeline_events, request.user)
+    
+    return render(request, 'home/index.html', {
         'timeline_events': timeline_events
-    }
-    return render(request, 'home/index.html')
+    })
 
 
 def index(request):
