@@ -1,21 +1,25 @@
 from django.shortcuts import render
 from utils.timeline import get_timeline_events, mark_user_honoured_events
 
+from django.shortcuts import render
+from utils.timeline import get_timeline_events, mark_user_honoured_events
+
 def index(request):
-    """Display the home page with timeline events"""
-    # Get timeline events using the utility function
+    """
+    View for the home page that includes timeline events
+    """
+    # Fetch timeline events using the same utility function used by the timeline view
     timeline_events = get_timeline_events()
     
-    # Mark events that the current user has honoured
+    # Mark events that have been honoured by the current user
     timeline_events = mark_user_honoured_events(timeline_events, request.user)
     
-    return render(request, 'home/index.html', {
-        'timeline_events': timeline_events
-    })
+    context = {
+        'timeline_events': timeline_events,
+    }
+    
+    return render(request, 'home/index.html', context)
 
-
-def index(request):
-    return render(request, 'home/index.html')
 
 def about(request):
     members = [
