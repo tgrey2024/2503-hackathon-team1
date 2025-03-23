@@ -179,8 +179,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Unfold Admin Configuration
 UNFOLD = {
     'SITE_TITLE': '404: Gender Gap Not Found Admin',
-    'SITE_HEADER': '404: Gender Gap Not Found Dashboard',
     'SITE_URL': '/',
+    'SITE_LOGO': lambda request: static('images/logo.webp'),
     'SITE_SYMBOL': 'timeline',
     'ENVIRONMENT': lambda _: [
         'Development' if 'DEV' in os.environ else 'Production',
@@ -228,6 +228,20 @@ UNFOLD = {
                         'title': _('Users'),
                         'icon': 'people',
                         'link': reverse_lazy('admin:auth_user_changelist'),
+                    },
+                    {
+                        'title': _('Mentors'),
+                        'icon': 'person',
+                        'link': reverse_lazy(
+                            'admin:mentors_mentorprofile_changelist'
+                        ),
+                    },
+                    {
+                        'title': _('Mentor Contacts'),
+                        'icon': 'contact_mail',
+                        'link': reverse_lazy(
+                            'admin:mentors_mentorcontact_changelist'
+                        ),
                     },
                 ],
             },
