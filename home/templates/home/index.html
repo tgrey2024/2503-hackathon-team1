@@ -21,7 +21,7 @@
         {% for event in timeline_events %}
         <li class="border-2 p-4 border-black mb-3">
             <div class="text-2xl font-bold text-black flex justify-center pb-2">{{ event.year }}</div>
-            <div class="flex justify-around">
+            <div class="flex justify-around items-center">
                 <h3 class="font-semibold text-lg">{{ event.event }}</h3>
                 {% if event.image %}
                     <img src="{{ event.image.url }}" alt="{{ event.event }}" class="h-40 border border-black mt-2">
