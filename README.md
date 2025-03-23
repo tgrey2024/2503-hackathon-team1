@@ -1,4 +1,4 @@
-# Project Title
+# 404: Gender Gap Not Found - Inspiring the Next Generation of Women in Tech
 
 ## User Experience
 
@@ -12,8 +12,12 @@ The web app aims to break barriers, close gender gaps and cultivate a diverse an
 
 Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c76b.herokuapp.com/)
 
-### Scope
-<!-- Add content for Scope here -->
+### Target Users
+- General Users: Visitors interested in exploring the key milestones of women in tech to learn about their achievements and biographies.
+- Students and Learners: People using the site to explore role models and gain guidance from mentors.
+- Authenticated Users: Registered users who can access additional features like connecting with mentors and honouring women tech icons on the timeline.
+- Researchers: Individuals seeking inspiration or information about notable figures featured in the timeline.
+- Administrators: Users responsible for managing content like timeline entries, biographies and connections to mentors.
 
 ## Design
 
@@ -21,7 +25,12 @@ Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c
 <!-- Add content for Colour Scheme here -->
 
 ### Fonts
-<!-- Add content for Fonts here -->
+The site uses a selection of fonts inspired by Web 1.0 pages from the late 1990's:
+
+**Gentium Book Basic**
+This is a timeless serif font designed for readability, featuring elegant letterforms and support for a wide range of languages and scripts, making it ideal for the biographies.
+![image](https://github.com/user-attachments/assets/7a589bdb-6f04-47ea-ae07-578ec26f8ae7)
+<!-- Add content here -->
 
 ### Wireframes
 Based on the user stories, we used Balsamiq to design the wireframes for the main UI, starting with mobile first.
@@ -29,6 +38,7 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
 <details>
   <summary>Mobile devices</summary>
     Here are the wireframes for mobile devices:
+    
 </details>
 <details>
   <summary>iPad screens</summary>
@@ -53,6 +63,13 @@ Here are all the user stories that have been prioritised for the current impleme
 | User Stories                                    | MoSCoW priority           |  Status |
 |:----------------------------------------------- |:-------------------------:|:-------:|
 | User-Friendly Navigation and Responsive Design  | must have                 |   Done  |
+| Display Timeline View | must have                 |   Done  |
+| Header and Footer  | must have                 |   Done  |
+| User Authentication  | must have                 |   Done  |
+| Connect with Mentors  | must have                 |   Done  |
+| Team page  | must have                 |   Done  |
+| Custom Error Pages  | should have                 |   Done  |
+
 <!-- add main user stories -->
 
 ## Features
@@ -83,16 +100,37 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 ## Technologies And Languages
 
 ### Languages Used
-HTML5 - for content and structure on the site.
-CSS - for styling the site.
-Python - provides functionality for the site.
-Django - as the Python framework for the site.
-Javascript - for interactive and dynamic elements of the site.
+- HTML5 - for content and structure on the site.
+- CSS - for styling the site.
+- Python - provides functionality for the site.
+- Django - as the Python framework for the site.
+- Javascript - for interactive and dynamic elements of the site.
 
-### Frameworks and Libraries
-Django
-Tailwind CSS - for responsive design
-FlyonUI - for styling timeline, etc.
+### Technologies
+- node.js
+
+### Deployment and Version Control
+- Git
+- Github
+- Heroku
+- Whitenoise - for serving static files
+- Cloudinary - for image storage
+
+### Styling
+- Tailwind CSS - for responsive design
+- FlyonUI - for styling timeline, etc.
+- Tabler - for icons
+
+### Authentication
+- Django AllAuth
+
+### Tools
+- VS Code - IDE for development
+- Balsamiq - for wireframes
+- Canva
+- LogoAI - for AI logo
+- Favicon.io - for favicons
+- Copilot - AI content generation
 
 ## Deployment
 The web app is hosted on Heroku using Eco Dynos, and is deployed via the designated Github repository.
@@ -126,7 +164,17 @@ The deployment process is as follows:
 <!-- Add content for Code here -->
 
 ### Contributors
-<!-- Add content for Contributors here -->
+Kiree [github.com/Swewi](https://github.com/Swewi)
+
+Debbie Thompson [github.com/debbiect246](https://github.com/debbiect246)
+
+Linus Johansson [github.com/j0hanz](https://github.com/j0hanz)
+
+Ashwinkarthik Selvaraj [github.com/ashwinsel](https://github.com/ashwinsel)
+
+Vital Nsengiyumva [github.com/Vinsengi](github.com/Vinsengi)
+
+Tripta Grey [github.com/tgrey2024](github.com/tgrey2024)
 
 ### Acknowledgements
 <!-- Add content for Acknowledgements here -->
