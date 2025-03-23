@@ -5,12 +5,43 @@
 {% block header %}Welcome{% endblock %}
 
 {% block content %}
-<div class="bg-blue-500 shadow overflow-hidden sm:rounded-lg p-6">
-    <p class="text-white mb-4">
-        Curabitur tincidunt, felis a elementum tincidunt, ex felis fermentum dui, eget pulvinar arcu eros eu eros. Vestibulum sollicitudin pretium velit, eget volutpat justo fermentum sit amet. Pellentesque in nulla in nisi dictum interdum..
-    </p>
-    <button class="bg-blue-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
-        Learn More
-    </button>
+
+<!-- Main content -->
+<div class="container mx-auto flex flex-col md:flex-row gap-6">
+    <!-- Left column content would go here -->
+    <div class="md:w-1/2">
+        <h1 class="text-3xl font-bold mb-4">Welcome to the Home Page</h1>
+        <p>This is the home page of the Hackathon project. It is a simple Django project that demonstrates how to build a web application using Django and Tailwind CSS.</p>
+    </div>
+    
+    <!-- Right column with timeline content -->
+    <div class="md:w-1/2 flex flex-col">
+        <h2 class="text-2xl font-bold mb-4">Timeline Events</h2>
+        
+        <!-- Debug info -->
+        <div class="bg-gray-100 p-4 mb-4 rounded">
+            <p><strong>Total events:</strong> {{ timeline_events|length }}</p>
+        </div>
+        
+        {% if timeline_events %}
+            <ul class="space-y-4">
+                {% for event in timeline_events %}
+                    <li class="border p-4 rounded-lg shadow">
+                        <h3 class="font-semibold text-lg">{{ event.event }}</h3>
+                        <div class="text-sm text-gray-500">{{ event.year|date:"Y" }}</div>
+                        <p class="mt-2">{{ event.description }}</p>
+                        {% if event.image %}
+                            <img src="{{ event.image.url }}" alt="{{ event.event }}" class="mt-2 w-full h-32 object-cover rounded">
+                        {% endif %}
+                    </li>
+                {% empty %}
+                    <li>No events found in the loop.</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No timeline events available. (Timeline_events is empty or None)</p>
+        {% endif %}
+    </div>
 </div>
+
 {% endblock %}
