@@ -14,14 +14,9 @@
         <p>This is the home page of the Hackathon project. It is a simple Django project that demonstrates how to build a web application using Django and Tailwind CSS.</p>
     </div>
     
-    <!-- timeline content -->
+    <!-- Right column with timeline content -->
     <div class="md:w-1/2 flex flex-col">
         <h2 class="text-2xl font-bold mb-4">Timeline Events</h2>
-        
-        <!-- Debug info -->
-        <div class="bg-gray-100 p-4 mb-4 rounded">
-            <p><strong>Total events:</strong> {{ timeline_events|length }}</p>
-        </div>
         
         {% if timeline_events %}
             <ul class="space-y-4">
@@ -31,7 +26,7 @@
                         <div class="text-sm text-gray-500">{{ event.year|date:"Y" }}</div>
                         <p class="mt-2">{{ event.description }}</p>
                         {% if event.image %}
-                            <img src="{{ event.image.url }}" alt="{{ event.event }}" class="mt-2 w-full h-32 object-cover rounded">
+                            <img src="{{ event.image.url }}" alt="{{ event.event }}" class="h-40 border border-black">
                         {% endif %}
                     </li>
                 {% empty %}
