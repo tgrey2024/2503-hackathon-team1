@@ -38,7 +38,7 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
 <details>
   <summary>Mobile devices</summary>
     Here are the wireframes for mobile devices:
-    
+
 </details>
 <details>
   <summary>iPad screens</summary>
@@ -60,21 +60,32 @@ We also used it during testing to log any significant bugs that need to be fixed
 ### User Stories
 Here are all the user stories that have been prioritised for the current implementation:
 
-| User Stories                                    | MoSCoW priority           |  Status |
-|:----------------------------------------------- |:-------------------------:|:-------:|
-| User-Friendly Navigation and Responsive Design  | must have                 |   Done  |
-| Display Timeline View | must have                 |   Done  |
-| Header and Footer  | must have                 |   Done  |
-| User Authentication  | must have                 |   Done  |
-| Connect with Mentors  | must have                 |   Done  |
-| Team page  | must have                 |   Done  |
-| Custom Error Pages  | should have                 |   Done  |
+| User Stories                                   | MoSCoW priority | Status |
+| :--------------------------------------------- | :-------------: | :----: |
+| User-Friendly Navigation and Responsive Design |    must have    |  Done  |
+| Display Timeline View                          |    must have    |  Done  |
+| Header and Footer                              |    must have    |  Done  |
+| User Authentication                            |    must have    |  Done  |
+| Connect with Mentors                           |    must have    |  Done  |
+| Team page                                      |    must have    |  Done  |
+| Custom Error Pages                             |   should have   |  Done  |
 
 <!-- add main user stories -->
 
 ## Features
 
-### Header and Footer
+### Header
+
+### Footer
+![Footer](documentation/footer.png)
+* The footer is styled with a dark blue background (#000080), white text, and a subtle border on top.
+
+* The text is centered, and the font is set to a monospace style (font-mono), with a small size (text-sm).
+
+* It includes a copyright notice with the text "404 Gender Gap Not Found - Since 1900", followed by "All Rights Reserved".
+
+* This footer is fixed at the bottom of the page (mt-auto), ensuring it stays at the bottom even if content above it is not enough to fill the screen.
+
 ### Timeline
 ### Tips
 ### Contact Form
@@ -141,7 +152,7 @@ The deployment process is as follows:
 3. Install web server gunicorn and freeze requirements.
 4. Create a new Procfile in the root directory and specify the running of the web app with process type as gunicorn in the Procfile.
 5. Add deployed apps to ALLOWED_HOSTS in settings.py, and set Debug = False. Add, commit and push to the Github repo.
-6. In Heroku, create a new app using a unique name and select the correct region. 
+6. In Heroku, create a new app using a unique name and select the correct region.
 7. Add Config Vars in Settings.
 8. Go to Deploy tab, search for the correct Github repo and **Deploy Branch**.
 9. Choose **Automatic Deploy**.
@@ -149,11 +160,34 @@ The deployment process is as follows:
 11. In the app's Resources tab, check that Eco Dynos are used and remove any unnecessary Add-ons.
 12. Subsequent changes to the code will need to be pushed to the Github repo and deployed on Heroku.
 
-### Creating A Fork
+## Creating A Fork
 <!-- Add content for Creating A Fork here -->
+1. On Github navigate to repository
+2. click "Fork" located towards the top right corner
+3. Select "owner" for the forked repo, from the dropdown menu under "owner" Under "Owner"
+4. It will create forked repo under the same name as orinial by default but you can type a name in "Repository name" or add a description in "Description" box.
+5. Click "Create fork" !
 
-### Cloning Repository
-<!-- Add content for Cloning Repository here -->
+Forking allows you to make any changes without affecting original project. You can send the suggestions over by submitting pull request. Project owner can review the pull request before accepting the suggestions and merging them.
+
+
+For more details on how to fork the repo, in order to for example suggest any changes to the project you can visit:
+https://docs.github.com/en/get-started/quickstart/fork-a-repo
+
+When you have fork to a repository you don't have access to files locally on your device, for this you will need to clone the forked repo.
+
+## Cloning the Repository
+
+1. On Github navigate to repository
+2. Click "Code" a green button shown right above the file list
+3. Copy the URL of the repo using HTTPS, SSH OR Github CLI
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory
+6. Type git clone, and then paste the URL you copied earlier
+7. Press enter to create local Clone
+
+For more details on how to clone the remote repo in order to create a local copy for own use, please go to
+https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 ## Credits
 
