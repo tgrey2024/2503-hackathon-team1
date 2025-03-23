@@ -15,54 +15,28 @@
   {% block extra_css %}{% endblock %}
 </head>
 <body class="bg-stone-300/80 min-h-screen flex flex-col font-serif {% if user.is_authenticated %}user-logged-in{% endif %}">
-
   <!-- Navigation Bar -->
-  <header class="bg-gray-900 text-white shadow">
+  <header class="border-t border-black px-6 py-4 font-mono text-normal mt-auto" style="background: linear-gradient(to right, #000080, #87CEFA); color: white;">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
       <!-- Logo / Site Title -->
       <div class="flex items-center">
         <a href="{% url 'home' %}" class="flex items-center">
-          <img src="{% static 'images/logo.webp' %}" alt="Hackathon Logo" 
-               class="h-10 w-auto max-w-full max-h-full object-contain mr-2">
+          <img src="{% static 'images/logo.webp' %}" alt="Hackathon Logo" class="h-10 w-auto max-w-full max-h-full object-contain mr-2">
         </a>
       </div>
 
       <!-- Horizontal Nav (hidden on mobile, shown on md+) -->
       <nav class="hidden md:flex space-x-4">
-        <a href="{% url 'home' %}" 
-           class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-          Home
-        </a>
-        <a href="{% url 'timeline' %}" 
-           class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-          Timeline
-        </a>
-        <a href="{% url 'mentors:mentor_list' %}" 
-           class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-          Mentors
-        </a>
-        <a href="{% url 'about' %}" 
-           class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-          Team
-        </a>
+        <a href="{% url 'home' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Home</a>        
+        <a href="{% url 'timeline' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Timeline</a>
+        <a href="{% url 'mentors:mentor_list' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Mentors</a>
+        <a href="{% url 'about' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Team</a>
         {% if user.is_authenticated %}
-          <a href="{% url 'account_logout' %}" 
-             class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-            Logout
-          </a>
-          <a href="{% url 'account_change_password' %}" 
-             class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-            Change Password
-          </a>
+          <a href="{% url 'account_logout' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Logout</a>
+          <a href="{% url 'account_change_password' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Change Password</a>
         {% else %}
-          <a href="{% url 'account_login' %}" 
-             class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-            Login
-          </a>
-          <a href="{% url 'account_signup' %}" 
-             class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-            Register
-          </a>
+          <a href="{% url 'account_login' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Login</a>
+          <a href="{% url 'account_signup' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Register</a>
         {% endif %}
       </nav>
 
@@ -79,7 +53,7 @@
         <!-- Dropdown menu -->
         <div id="navbar-dropdown"
              class="hidden absolute right-0 mt-2 w-48 bg-white text-black border border-gray-200 rounded-md shadow-lg z-10">
-          <a href="{% url 'home' %}" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+          <a href="{% url 'home' %}" class="block px-4 py-2 hover:bg-gray-100">Home</a>          
           <a href="{% url 'timeline' %}" class="block px-4 py-2 hover:bg-gray-100">Timeline</a>
           <a href="{% url 'mentors:mentor_list' %}" class="block px-4 py-2 hover:bg-gray-100">Mentors</a>
           <a href="{% url 'about' %}" class="block px-4 py-2 hover:bg-gray-100">Team</a>
@@ -101,14 +75,11 @@
       {% block content %}{% endblock %}
     </div>
   </main>
-
-  <footer class="footer footer-center border-t border-gray-300 shadow-md px-6 py-4 font-mono text-sm mt-auto" 
-          style="background: linear-gradient(to right, #000080, #87CEFA); color: white;">
+  <footer class="footer footer-center border-t border-gray-300 shadow-md px-6 py-4 font-mono text-sm mt-auto" style="background: linear-gradient(to right, #000080, #87CEFA); color: white;">
     <aside>
       <p>&copy; 404 Gender Gap Not Found - Since 1900 - All rights reserved.</p>
     </aside>
   </footer>
-
   {% block javascript %}
   <script src="{% static 'js/script.js' %}"></script>
   <script src="{% static 'js/flyonui.js' %}"></script>
@@ -123,5 +94,6 @@
     });
   </script>
   {% endblock %}
+
 </body>
 </html>
