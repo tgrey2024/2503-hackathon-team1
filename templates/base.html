@@ -17,7 +17,7 @@
 <body class="bg-stone-300/80 min-h-screen flex flex-col font-serif {% if user.is_authenticated %}user-logged-in{% endif %}">
 
   <!-- Navigation Bar -->
-  <header class="bg-gray-900 text-white shadow">
+  <header class="bg-gray-800 text-white">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
       <!-- Logo / Site Title -->
       <div class="flex items-center">
@@ -29,40 +29,16 @@
 
       <!-- Horizontal Nav (hidden on mobile, shown on md+) -->
       <nav class="hidden md:flex space-x-4">
-        <a href="{% url 'home' %}" 
-           class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-          Home
-        </a>
-        <a href="{% url 'timeline' %}" 
-           class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-          Timeline
-        </a>
-        <a href="{% url 'mentors:mentor_list' %}" 
-           class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-          Mentors
-        </a>
-        <a href="{% url 'about' %}" 
-           class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-          Team
-        </a>
+        <a href="{% url 'home' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Home</a>        
+        <a href="{% url 'timeline' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Timeline</a>
+        <a href="{% url 'mentors:mentor_list' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Mentors</a>
+        <a href="{% url 'about' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Team</a>
         {% if user.is_authenticated %}
-          <a href="{% url 'account_logout' %}" 
-             class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-            Logout
-          </a>
-          <a href="{% url 'account_change_password' %}" 
-             class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-            Change Password
-          </a>
+          <a href="{% url 'account_logout' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Logout</a>
+          <a href="{% url 'account_change_password' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Change Password</a>
         {% else %}
-          <a href="{% url 'account_login' %}" 
-             class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-            Login
-          </a>
-          <a href="{% url 'account_signup' %}" 
-             class="px-4 py-2 border border-white text-lg rounded-md hover:bg-gray-700 transition-colors">
-            Register
-          </a>
+          <a href="{% url 'account_login' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Login</a>
+          <a href="{% url 'account_signup' %}" class="px-4 py-2 border border-gray-700 rounded-md hover:text-gray-300">Register</a>
         {% endif %}
       </nav>
 
