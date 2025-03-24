@@ -99,7 +99,6 @@ The web app strives to break barriers, close gender gaps, and cultivate a divers
 ### Fonts
 The site uses fonts inspired by late 1990’s Web 1.0 aesthetics. In particular:
 
-**Gentium Book Basic**
 We used Tailwind built-in fonts, Serif and Mono, designed for readability with elegant letterforms and extensive language support—ideal for biographies.
 
 ### Wireframes
@@ -201,21 +200,21 @@ The header of this project is designed with a retro-modern and responsive layout
 
 ### Tips
 ### Contact Mentor Form
-* User may find a mentor from the pool of mentors on our mentors page.
-* If a user finds no matching mentor right away, the user may click on the "Find a mentor" button
-* A contact a mentor window will pop up and the user may provide his/heremial, mentor name and a message.
-* The sytem will then try to match the user with a mentor.
+* User may pick a mentor from the pool.
+* If no one suites them then they can use the 'Find a mentor' button to send a message to have one assigned.
+* Or Connect with their choose Mentor. 
+* The system will then try to match the user with a mentor.
 ### Admin Panel
 The Admin Panel is set up for the admin or superuser to access and update the data in the database.
 
 ### Custom Error Pages
-We have custom error pages for 400, 403, 404 (example shown) and 500.
-  ![Timeline](documentation/features/cust-error.png)
+* We have custom error pages for 400, 403, 404 (example shown) and 500.
+![Timeline](documentation/features/cust-error.png)
 
 ### Future Features
-* filter for mentors
+* Filter for mentors
 * CRUD function for mentors
-* allow users to create their own avatar
+* Allow users to create their own avatar
 
 
 ## Testing
@@ -368,16 +367,19 @@ To clone the repository locally:
    git clone https://github.com/tgrey2024/2503-hackathon-team1.git
 
 ## Credits
-### Media
-<!-- Add content for Media here -->
 ### Code
-<!-- Add content for Code here -->
+- [98.css](https://jdan.github.io/98.css/) Used as inspiration for the site style
+- [W3 Schools](https://www.w3schools.com/html/default.asp) Excellent Reference
+- [TailwindCSS](https://tailwindcss.com/) The source of all styling across site
+- [FlyonUI](https://flyonui.com/) A source of several components used throughout the site
 ### Contributors
-Kiree Bellamy [github.com/Swewi](https://github.com/Swewi)
-Debbie Thompson [github.com/debbiect246](https://github.com/debbiect246)
-Linus Johansson [github.com/j0hanz](https://github.com/j0hanz)
-Ashwinkarthik Selvaraj [github.com/ashwinsel](https://github.com/ashwinsel)
-Vital Nsengiyumva [github.com/Vinsengi](github.com/Vinsengi)
-Tripta Grey [github.com/tgrey2024](github.com/tgrey2024)
+| Team Member | Github link |
+| ------- | ------- |
+| Kiree Bellamy |[github.com/Swewi](https://github.com/Swewi)|
+| Debbie Thompson | [github.com/debbiect246](https://github.com/debbiect246) |
+| Linus Johansson | [github.com/j0hanz](https://github.com/j0hanz) |
+| Ashwinkarthik Selvaraj | [github.com/ashwinsel](https://github.com/ashwinsel) |
+| Vital Nsengiyumva | [github.com/Vinsengi](github.com/Vinsengi) |
+| Tripta Grey | [github.com/tgrey2024](github.com/tgrey2024) |
 ### Acknowledgements
-Many thanks to Code Institute and the facilitators.
+Many thanks to Code Institute and the facilitators, and our families for allowing us the time and space to attend the Hackathon.
