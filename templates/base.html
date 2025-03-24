@@ -27,32 +27,32 @@
 
       <!-- Horizontal Nav (hidden on mobile, shown on md+) -->
       <nav class="hidden md:flex space-x-4">
-        <a href="{% url 'home' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Home</a>        
-        <a href="{% url 'timeline' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Timeline</a>
-        <a href="{% url 'mentors:mentor_list' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Mentors</a>
-        <a href="{% url 'about' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Team</a>
-        {% if user.is_authenticated %}
-          <a href="{% url 'account_logout' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Logout</a>
-          <a href="{% url 'account_change_password' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Change Password</a>
+        <a href="{% url 'home' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">Home</a>        
+        <a href="{% url 'timeline' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">Timeline</a>
+        <a href="{% url 'mentors:mentor_list' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">Mentors</a>
+        <a href="{% url 'about' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">Team</a>
+        {% if user.is_authenticated %}          
+          <a href="{% url 'account_change_password' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">Change Password</a>
+          <a href="{% url 'account_logout' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">Logout</a>
         {% else %}
-          <a href="{% url 'account_login' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Login</a>
-          <a href="{% url 'account_signup' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white">Register</a>
+          <a href="{% url 'account_login' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">Login</a>
+          <a href="{% url 'account_signup' %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">Register</a>
         {% endif %}
       </nav>
 
       <!-- Mobile Menu Button + Dropdown (shown on mobile, hidden on md+) -->
       <div class="md:hidden relative z-10">
         <!-- Burger button -->
-        <button id="navbar-burger" class="focus:outline-none" aria-label="Open Menu">
-          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
-               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <button id="navbar-burger" class="focus:outline-none border-2 border-black bg-white text-black" aria-label="Open Menu">
+          <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
 
         <!-- Dropdown menu -->
         <div id="navbar-dropdown"
-             class="hidden absolute right-0 mt-2 w-48 bg-white text-black border border-gray-200 rounded-md shadow-lg z-10">
+            class="hidden absolute right-0 mt-2 w-48 font-serif bg-white text-black border-2 border-black g z-10">
           <a href="{% url 'home' %}" class="block px-4 py-2 hover:bg-gray-100">Home</a>          
           <a href="{% url 'timeline' %}" class="block px-4 py-2 hover:bg-gray-100">Timeline</a>
           <a href="{% url 'mentors:mentor_list' %}" class="block px-4 py-2 hover:bg-gray-100">Mentors</a>
