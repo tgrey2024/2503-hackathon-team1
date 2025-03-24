@@ -225,6 +225,15 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 | User Authentication (Login/Registration Flow)    | Chrome, Firefox, Edge, Safari                          | 1. Visit login and registration pages<br>2. Submit forms with valid data<br>3. Confirm redirection to home | ✔      |
 | Timeline Page Interaction                        | Chrome, Firefox, Edge, Safari                          | 1. Visit the timeline page<br>2. Interact with timeline elements and honour buttons<br>3. Verify proper functionality | ✔      |
 
+* W3 markdown testing - clean no errors or warnings.  
+* Small screen responsive design for Login/Registration Flow minimal padding to ensure an authentic look.
+
+### Accessability testing
+| Source | Outcome |
+| ---| --- |
+| lighthouse | 94% - pass |
+| Wave | Pass |
+| Accessible Web | 96% - pass |
 ---
 
 ## Bugs
@@ -266,6 +275,7 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 - **Canva, LogoAI:** For logo and design assets.
 - **Favicon.io:** For favicon generation.
 - **Copilot:** AI-powered code assistance.
+- **Miro:** Used for planning and brainstorming
 
 ---
 
