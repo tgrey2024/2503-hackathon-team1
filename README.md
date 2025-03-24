@@ -2,6 +2,7 @@
 ![screenshot](documentation/features/responsive-all-devices-gray.png)
 
 
+
 **404: Gender Gap Not Found** is a groundbreaking web application dedicated to celebrating the achievements of women in technology. By showcasing inspiring stories, offering valuable tech tips, and bridging the mentorship gap, our platform aims to empower the next generation of female innovators. We envision a future where diversity and inclusion drive progress—ensuring that the gender gap in tech is a challenge of the past.
 
 Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c76b.herokuapp.com/)
@@ -99,38 +100,25 @@ The web app strives to break barriers, close gender gaps, and cultivate a divers
 The site uses fonts inspired by late 1990’s Web 1.0 aesthetics. In particular:
 
 **Gentium Book Basic**
-A timeless serif font designed for readability with elegant letterforms and extensive language support—ideal for biographies.
-
-![Gentium Book Basic Example](https://github.com/user-attachments/assets/7a589bdb-6f04-47ea-ae07-578ec26f8ae7)
+We used Tailwind built-in fonts, Serif and Mono, designed for readability with elegant letterforms and extensive language support—ideal for biographies.
 
 ### Wireframes
 Based on the user stories, we used Balsamiq to design the wireframes for the main UI, starting with mobile first.
 
 <details>
   <summary>Header and Footer</summary>
-<<<<<<<<< Temporary merge branch 1
-  Wireframes for the site header and footer.
-</details>
-<details>
-  <summary>Contact a Mentor</summary>
-  Wireframes for the contact form for connecting with a mentor.
-</details>
-<details>
-  <summary>Timeline</summary>
-  Wireframes for the timeline:
-  ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
-  ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
-  ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
-=========
-    Here are the wireframes for the site with its header and footer:
 
+  Wireframes for the site header and footer:
+
+  ![Timeline](documentation/wireframes/wf_tips.png)
 
 </details>
+
 <details>
   <summary>Contact a Mentor</summary>
     Here are the wireframes for contact form for connecting with a mentor:
 
-
+  ![Timeline](documentation/wireframes/wf_mentors.png)
 
 </details>
 <details>
@@ -140,7 +128,7 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
    ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
       ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
     ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
->>>>>>>>> Temporary merge branch 2
+
 </details>
 
 ---
@@ -167,7 +155,7 @@ Below are the prioritized user stories for the current implementation:
 
 ## Features
 
-<<<<<<<<< Temporary merge branch 1
+
 - **Header and Footer:** Consistent branding and easy navigation.
 - **Timeline:** A retro-inspired timeline showcasing milestones of women in tech.
 - **Tips:** Practical tech tips to empower users.
@@ -175,7 +163,7 @@ Below are the prioritized user stories for the current implementation:
 - **Admin Panel:** Secure administration interface for managing content.
 - **Error Pages:** Custom-designed error pages that align with the site’s aesthetic.
 - **Future Features:** We're constantly refining our platform to better serve our community. Upcoming enhancements include more interactive timeline features, advanced mentor matching capabilities, and a wealth of new resources to empower the next generation of tech innovators. Stay tuned for regular updates as we expand our offerings and fine-tune the user experience.
-=========
+
 ### Header
 ![Header](documentation/features/header.png)
 #### Header Section Overview
@@ -221,10 +209,13 @@ The header of this project is designed with a retro-modern and responsive layout
 The Admin Panel is set up for the admin or superuser to access and update the data in the database.
 
 ### Custom Error Pages
-<!-- Add content for Error Pages here -->
+We have custom error pages for 400, 403, 404 (example shown) and 500.
+  ![Timeline](documentation/features/cust-error.png)
 
 ### Future Features
->>>>>>>>> Temporary merge branch 2
+* filter for mentors
+* CRUD function for mentors
+* allow users to create their own avatar
 
 
 ## Testing
@@ -244,7 +235,7 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 ## Bugs
 
 ### Known Bugs
-*Details to be added:* List any known issues along with workarounds or planned fixes.
+* Lighthouse issue: http insecure due to Cloudinary
 
 ---
 
@@ -280,10 +271,6 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 - **Canva, LogoAI:** For logo and design assets.
 - **Favicon.io:** For favicon generation.
 - **Copilot:** AI-powered code assistance.
-
----
-
-Here’s a polished, easy‑to‑read **Markdown** version of your Local Development Setup instructions:
 
 ---
 
@@ -379,3 +366,18 @@ To clone the repository locally:
 3. Open your terminal and run:
    ```bash
    git clone https://github.com/tgrey2024/2503-hackathon-team1.git
+
+## Credits
+### Media
+<!-- Add content for Media here -->
+### Code
+<!-- Add content for Code here -->
+### Contributors
+Kiree Bellamy [github.com/Swewi](https://github.com/Swewi)
+Debbie Thompson [github.com/debbiect246](https://github.com/debbiect246)
+Linus Johansson [github.com/j0hanz](https://github.com/j0hanz)
+Ashwinkarthik Selvaraj [github.com/ashwinsel](https://github.com/ashwinsel)
+Vital Nsengiyumva [github.com/Vinsengi](github.com/Vinsengi)
+Tripta Grey [github.com/tgrey2024](github.com/tgrey2024)
+### Acknowledgements
+Many thanks to Code Institute and the facilitators.
