@@ -1,3 +1,5 @@
 #id_password_helptext {
-  display: none;
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }

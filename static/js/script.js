@@ -100,4 +100,14 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleHonour(button);
     });
   });
+
+  // Mobile menu toggle
+  const burgerBtn = document.getElementById("navbar-burger");
+  const dropdown = document.getElementById("navbar-dropdown");
+
+  if (burgerBtn && dropdown) {
+    burgerBtn.addEventListener("click", () => {
+      dropdown.classList.toggle("hidden");
+    });
+  }
 });

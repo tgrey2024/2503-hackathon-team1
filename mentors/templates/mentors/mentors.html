@@ -1,75 +1,102 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
-{% block title %}Mentors{% endblock %}
+{% block title %}
+  Mentors
+{% endblock %}
+
 
 {% block content %}
-<div class="container mx-auto py-8 px-4">
-    <h1 class="text-3xl font-bold mb-8 text-center">Connect with a Mentor</h1>
+  <div class="container mx-auto py-8 px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center">
+      Connect with a Mentor
+    </h2>
 
     <!-- Find Mentor button -->
-    <div class="text-center mb-8">
-        {% if user.is_authenticated %}
-            <a href="{% url 'mentors:contact_form' %}" class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300">
-                Find a Mentor
-            </a>
-        {% else %}
-            <a href="{% url 'account_signup' %}" class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300">
-                Sign Up to Find a Mentor
-            </a>
-        {% endif %}
+    <div class="text-center text-base font-bold tracking-wide mb-8">
+      {% if user.is_authenticated %}
+        <a href="{% url 'mentors:contact_form' %}"
+           class="px-6 py-3 border-2 border-black bg-white text-black hover:bg-blue-800 hover:text-white transition duration-300">
+          Find a Mentor
+        </a>
+      {% else %}
+        <a href="{% url 'account_signup' %}"
+           class="px-6 py-3 border-2 border-black bg-white text-black hover:bg-blue-800 hover:text-white transition duration-300">
+          Sign Up to Find a Mentor
+        </a>
+      {% endif %}
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {% for mentor in mentors %}
+      {% for mentor in mentors %}
         <div class="mb-6">
-            <div class="window h-full">
-                <div class="title-bar">
-                    <div class="title-bar-text">{{ mentor.name }}</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Maximize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="window-body p-4">
-                    <div class="flex flex-col sm:flex-row mb-4">
-                        <div class="flex-shrink-0 mb-3 sm:mb-0 sm:mr-4">
-                            {% if mentor.image %}
-                                <img src="{{ mentor.image.url }}" alt="{{ mentor.name }}" class="h-32 w-32 object-cover mx-auto sm:mx-0">
-                            {% else %}
-                                <div class="h-32 w-32 bg-gray-200 rounded-full flex items-center justify-center mx-auto sm:mx-0">
-                                    <span class="text-gray-400 text-4xl">👤</span>
-                                </div>
-                            {% endif %}
-                        </div>
-                        <div class="flex flex-col justify-start text-center sm:text-left">
-                            <div class="text-lg sm:text-lg md:text-xl font-bold mb-1">{{ mentor.name }}</div>
-                            <div class="text-sm md:text-md font-bold text-gray-700">{{ mentor.role }}</div>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <p>{{ mentor.description }}</p>
-                    </div>
-                    <div class="text-start mt-auto">
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'mentors:contact_mentor' mentor.id %}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 inline-block">
-                                Connect
-                            </a>
-                        {% else %}
-                            <a href="{% url 'account_signup' %}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 inline-block">
-                                Sign Up to Connect
-                            </a>
-                        {% endif %}
-                    </div>
-                </div>
+          <div class="window h-full">
+            <div class="title-bar">
+              <div class="title-bar-text">
+                {{ mentor.name }}
+              </div>
+              <div class="title-bar-controls">
+                <button aria-label="Minimize">
+                </button>
+                <button aria-label="Maximize">
+                </button>
+                <button aria-label="Close">
+                </button>
+              </div>
             </div>
+            <div class="window-body p-4 font-mono text-base font-bold tracking-wide">
+              <div class="flex flex-col sm:flex-row mb-4">
+                <div class="flex-shrink-0 mb-3 sm:mb-0 sm:mr-4">
+                  {% if mentor.image %}
+                    <img src="{{ mentor.image.url }}"
+                         alt="{{ mentor.name }}"
+                         class="h-32 w-32 border border-black object-cover mx-auto sm:mx-0" />
+                  {% else %}
+                    <div class="h-32 w-32 border border-black bg-white flex items-center justify-center mx-auto sm:mx-0">
+                      <span class="text-black text-4xl">👤</span>
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="flex flex-col justify-start text-center sm:text-left">
+                  <div class="text-xl sm:text-lg md:text-xl font-bold mb-1">
+                    {{ mentor.name }}
+                  </div>
+                  <div class="text-base md:text-md font-bold text-black">
+                    {{ mentor.role }}
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <p>
+                  {{ mentor.description }}
+                </p>
+              </div>
+              <div class="text-start mt-auto">
+                {% if user.is_authenticated %}
+                  <a href="{% url 'mentors:contact_mentor' mentor.id %}"
+                     class="px-4 py-2 border-2 border-black bg-white text-black hover:bg-blue-800 hover:text-white transition duration-300 inline-block">
+                    Connect
+                  </a>
+                {% else %}
+                  <a href="{% url 'account_signup' %}"
+                     class="px-4 py-2 border-2 border-black bg-white text-black hover:bg-blue-800 hover:text-white transition duration-300 inline-block">
+                    Sign Up to Connect
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
         </div>
-        {% empty %}
+      {% empty %}
         <div class="col-span-full text-center">
-            <p>No mentors available at the moment. Please check back later.</p>
-            <img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fmedia.tenor.com%2F7nbpMQwEGC8AAAAM%2Fclippy-microsoft.gif" alt="Clippy Microsoft Office Assistant" class="mx-auto mt-6">
+          <p>
+            No mentors available at the moment. Please check back later.
+          </p>
+          <img src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fmedia.tenor.com%2F7nbpMQwEGC8AAAAM%2Fclippy-microsoft.gif"
+               alt="Clippy Microsoft Office Assistant"
+               class="mx-auto mt-6" />
         </div>
-        {% endfor %}
+      {% endfor %}
     </div>
-</div>
+  </div>
 {% endblock %}
