@@ -1,4 +1,10 @@
 # 404: Gender Gap Not Found - Inspiring the Next Generation of Women in Tech
+
+**404: Gender Gap Not Found** is a groundbreaking web application dedicated to celebrating the achievements of women in technology. By showcasing inspiring stories, offering valuable tech tips, and bridging the mentorship gap, our platform aims to empower the next generation of female innovators. We envision a future where diversity and inclusion drive progress—ensuring that the gender gap in tech is a challenge of the past.
+
+Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c76b.herokuapp.com/)
+
+---
 ![logo_readme](https://github.com/user-attachments/assets/090ae0dd-d384-4a29-825f-11549e6fcc10)![clippy2](https://github.com/user-attachments/assets/02fe2f36-1931-4280-ab35-01172097a8b9)
 
 
@@ -6,34 +12,38 @@
 ## User Experience
 
 ### Site Goals
-Our app is designed to inspire the next generation of tech innovators by:
-- sharing stories of women pioneers in tech
-- providing handy tips into tech
-- bridging the mentorship gap for women in technology by connecting mentees with mentors who can guide their professional journeys.
+Our app is designed to inspire tech innovators by:
+- **Sharing Stories:** Highlighting the key milestones and achievements of women pioneers in technology.
+- **Providing Tips:** Offering handy, practical tips for navigating the tech world.
+- **Bridging Mentorship Gaps:** Connecting mentees with experienced mentors who can guide their professional journeys.
 
-The web app aims to break barriers, close gender gaps and cultivate a diverse and inclusive tech community where women can thrive as innovators, leaders and changemakers. It’s not just about mentorship — it’s about building a stronger future for women in technology.
-
-Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c76b.herokuapp.com/)
+The web app strives to break barriers, close gender gaps, and cultivate a diverse, inclusive community where women can thrive as innovators, leaders, and changemakers. It’s not just about mentorship—it’s about building a stronger future for women in technology.
 
 ### Target Users
-- General Users: Visitors interested in exploring the key milestones of women in tech to learn about their achievements and biographies.
-- Students and Learners: People using the site to explore role models and gain guidance from mentors.
-- Authenticated Users: Registered users who can access additional features like connecting with mentors and honouring women tech icons on the timeline.
-- Researchers: Individuals seeking inspiration or information about notable figures featured in the timeline.
-- Administrators: Users responsible for managing content like timeline entries, biographies and connections to mentors.
+- **General Users:** Visitors interested in exploring milestones and biographies of women in tech.
+- **Students and Learners:** Individuals looking for role models and guidance from mentors.
+- **Authenticated Users:** Registered users who access additional features like mentor connections and honoring tech icons.
+- **Researchers:** People seeking inspiration or detailed information about notable figures.
+- **Administrators:** Those managing content such as timeline entries, biographies, and mentor connections.
+
+---
 
 ## Design
 
 ### Colour Scheme
+Retro Vibe: The design features a bold combination of Navy (#000080) and LightSkyBlue (#87CEFA) as seen in the footer gradient, evoking a nostalgic Windows 98 feel.
+High Contrast: The dark navbar (bg-gray-900) paired with white text and borders ensures excellent readability on large screens.
+Accent Variety: Subtle Silver (#C0C0C0) accents and well-defined hover effects add visual depth without detracting from the retro aesthetic.
 We draw from a palette of colours commonly found on operating systems in the 90's, taking inspiring from the cool retro colours of the Windows 98 operating system: 
 ![Colour scheme](documentation/features/colours.png)
 
 ### Fonts
-The site uses a selection of fonts inspired by Web 1.0 pages from the late 1990's:
+The site uses fonts inspired by late 1990’s Web 1.0 aesthetics. In particular:
 
-**Gentium Book Basic**
-This is a timeless serif font designed for readability, featuring elegant letterforms and support for a wide range of languages and scripts, making it ideal for the biographies.
-![image](https://github.com/user-attachments/assets/7a589bdb-6f04-47ea-ae07-578ec26f8ae7)
+**Gentium Book Basic**  
+A timeless serif font designed for readability with elegant letterforms and extensive language support—ideal for biographies.
+
+![Gentium Book Basic Example](https://github.com/user-attachments/assets/7a589bdb-6f04-47ea-ae07-578ec26f8ae7)
 
 ### Wireframes
 Based on the user stories, we used Balsamiq to design the wireframes for the main UI, starting with mobile first.
@@ -59,31 +69,43 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
    ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
       ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
     ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
+  <summary>Laptop and Larger Screens</summary>
+  Wireframes for laptops and larger screens are available here.
 </details>
+
+---
 
 ## Agile Methodology
 
 ### Kanban Board
-All user stories were logged on the [Kanban Project Board](https://github.com/users/tgrey2024/projects/21) on GitHub Projects.
-
-We also used it during testing to log any significant bugs that need to be fixed before the deadline. These were then assigned and prioritised alongside other issues and user stories.
+All user stories were logged on the [Kanban Project Board](https://github.com/users/tgrey2024/projects/21) on GitHub Projects. We used this board during development and testing to track progress, assign priorities, and log significant bugs.
 
 ### User Stories
-Here are all the user stories that have been prioritised for the current implementation:
+Below are the prioritized user stories for the current implementation:
 
-| User Stories                                   | MoSCoW priority | Status |
-| :--------------------------------------------- | :-------------: | :----: |
-| User-Friendly Navigation and Responsive Design |    must have    |  Done  |
-| Display Timeline View                          |    must have    |  Done  |
-| Header and Footer                              |    must have    |  Done  |
-| User Authentication                            |    must have    |  Done  |
-| Connect with Mentors                           |    must have    |  Done  |
-| Team page                                      |    must have    |  Done  |
-| Custom Error Pages                             |   should have   |  Done  |
+| User Stories                                    | MoSCoW Priority           |  Status |
+|:----------------------------------------------- |:-------------------------:|:-------:|
+| User-Friendly Navigation and Responsive Design  | must have                 |   Done  |
+| Display Timeline View                           | must have                 |   Done  |
+| Header and Footer                               | must have                 |   Done  |
+| User Authentication                             | must have                 |   Done  |
+| Connect with Mentors                            | must have                 |   Done  |
+| Team Page                                       | must have                 |   Done  |
+| Custom Error Pages                              | should have               |   Done  |
 
+---
 
 ## Features
 
+- **Header and Footer:** Consistent branding and easy navigation.
+- **Timeline:** A retro-inspired timeline showcasing milestones of women in tech.
+- **Tips:** Practical tech tips to empower users.
+- **Contact Form:** An accessible way for users to get in touch.
+- **Admin Panel:** Secure administration interface for managing content.
+- **Error Pages:** Custom-designed error pages that align with the site’s aesthetic.
+- **Future Features:** We're constantly refining our platform to better serve our community. Upcoming enhancements include more interactive timeline features, advanced mentor matching capabilities, and a wealth of new resources to empower the next generation of tech innovators. Stay tuned for regular updates as we expand our offerings and fine-tune the user experience.
+
+---
 ### Header
 ![Header](documentation/features/header.png)
 #### Header Section Overview
@@ -137,65 +159,79 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 ## Testing
 
 ### Manual Testing
-<!-- Add content for Manual Testing here -->
-WCAG Accessibility and Contrast checking Extension
+| Test Case                                        | Browser Compatibility                                  | Steps to Reproduce                                                                                      | Status |
+|--------------------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------------------------------------------|:------:|
+| Responsive Navigation Bar (Desktop)              | Chrome, Firefox, Edge, Safari                          | 1. Open the site on a desktop browser<br>2. Verify nav links are visible and properly aligned          | ✔      |
+| Responsive Navigation Bar (Mobile - Burger Menu) | Chrome (DevTools), Safari, Firefox, Edge               | 1. Open the site in a mobile viewport<br>2. Click on the burger icon<br>3. Verify dropdown appears      | ✔      |
+| Home Page Rendering                              | Chrome, Firefox, Edge, Safari                          | 1. Visit the homepage URL<br>2. Verify the main content (image, text, layout) is rendered correctly       | ✔      |
+| About Us Page with Team Section                  | Chrome, Firefox, Edge, Safari                          | 1. Visit `/about/` URL<br>2. Verify team members section displays correctly with images and GitHub links  | ✔      |
+| User Authentication (Login/Registration Flow)    | Chrome, Firefox, Edge, Safari                          | 1. Visit login and registration pages<br>2. Submit forms with valid data<br>3. Confirm redirection to home | ✔      |
+| Timeline Page Interaction                        | Chrome, Firefox, Edge, Safari                          | 1. Visit the timeline page<br>2. Interact with timeline elements and honour buttons<br>3. Verify proper functionality | ✔      |
+
+
+---
 
 ## Bugs
 
 ### Known Bugs
-<!-- Add content for Known Bugs here -->
+*Details to be added:* 
 
-## Technologies And Languages
+---
+
+## Technologies and Languages
 
 ### Languages Used
-- HTML5 - for content and structure on the site.
-- CSS - for styling the site.
-- Python - provides functionality for the site.
-- Django - as the Python framework for the site.
-- Javascript - for interactive and dynamic elements of the site.
+- **HTML5:** For site structure.
+- **CSS:** For styling.
+- **Python:** Provides the site’s core functionality.
+- **Django:** The Python framework powering the app.
+- **JavaScript:** For interactive and dynamic elements.
 
 ### Technologies
-- node.js
+- **node.js**
 
 ### Deployment and Version Control
-- Git
-- Github
-- Heroku
-- Whitenoise - for serving static files
-- Cloudinary - for image storage
+- **Git** and **Github:** For version control.
+- **Heroku:** Hosting the web application.
+- **Whitenoise:** Serving static files.
+- **Cloudinary:** Image storage.
 
 ### Styling
-- Tailwind CSS - for responsive design
-- FlyonUI - for styling timeline, etc.
-- Tabler - for icons
+- **Tailwind CSS:** For responsive design.
+- **FlyonUI:** For styling elements like the timeline.
+- **Tabler:** For icons.
 
 ### Authentication
-- Django AllAuth
+- **Django AllAuth**
 
 ### Tools
-- VS Code - IDE for development
-- Balsamiq - for wireframes
-- Canva
-- LogoAI - for AI logo
-- Favicon.io - for favicons
-- Copilot - AI content generation
+- **VS Code:** IDE for development.
+- **Balsamiq:** For wireframe creation.
+- **Canva, LogoAI:** For logo and design assets.
+- **Favicon.io:** For favicon generation.
+- **Copilot:** AI-powered code assistance.
+
+---
 
 ## Deployment
-The web app is hosted on Heroku using Eco Dynos, and is deployed via the designated Github repository.
 
-The deployment process is as follows:
-1. Login to your GitHub profile and **Create a new repository**.
-2. Open VS Code locally, connect and open the workspace. Create the MVP.
-3. Install web server gunicorn and freeze requirements.
-4. Create a new Procfile in the root directory and specify the running of the web app with process type as gunicorn in the Procfile.
-5. Add deployed apps to ALLOWED_HOSTS in settings.py, and set Debug = False. Add, commit and push to the Github repo.
-6. In Heroku, create a new app using a unique name and select the correct region.
-7. Add Config Vars in Settings.
-8. Go to Deploy tab, search for the correct Github repo and **Deploy Branch**.
-9. Choose **Automatic Deploy**.
-10. **View app** to verify that it is been deployed correctly. This deployed site can now be validated and tested e.g. in Chrome Dev Tools.
-11. In the app's Resources tab, check that Eco Dynos are used and remove any unnecessary Add-ons.
-12. Subsequent changes to the code will need to be pushed to the Github repo and deployed on Heroku.
+The web app is hosted on Heroku using Eco Dynos and is deployed via the designated GitHub repository.
+
+**Deployment Process:**
+1. Log in to your GitHub profile and **create a new repository**.
+2. Open VS Code locally, connect to the workspace, and build the MVP.
+3. Install the web server **gunicorn** and freeze requirements.
+4. Create a new **Procfile** in the root directory specifying gunicorn as the process type.
+5. Update `ALLOWED_HOSTS` in `settings.py` and set `DEBUG = False` for production. Commit and push these changes.
+6. In Heroku, create a new app using a unique name and the correct region.
+7. Add necessary **Config Vars** in the Heroku settings.
+8. Go to the **Deploy** tab, connect the correct GitHub repository, and deploy the branch.
+9. Choose **Automatic Deploy** for seamless updates.
+10. Verify the deployed site using browser developer tools.
+11. In the app's Resources tab, confirm Eco Dynos are in use and remove unnecessary add-ons.
+12. Future changes should be pushed to GitHub and deployed on Heroku accordingly.
+
+---
 
 ## Creating A Fork
 1. On Github navigate to repository
@@ -228,23 +264,18 @@ https://docs.github.com/en/repositories/creating-and-managing-repositories/cloni
 ## Credits
 
 ### Media
-<!-- Add content for Media here -->
+*Details to be added:* 
 
 ### Code
-<!-- Add content for Code here -->
+This project leverages a number of robust third-party libraries and frameworks. We use Django for backend operations, Tailwind CSS for responsive design, 98.css for a retro Windows 98 aesthetic, FlyonUI for timeline styling, and Tabler for icons. We acknowledge and appreciate the open-source community for providing these essential tools.
 
 ### Contributors
-Kiree Bellamy [github.com/Swewi](https://github.com/Swewi)
-
-Debbie Thompson [github.com/debbiect246](https://github.com/debbiect246)
-
-Linus Johansson [github.com/j0hanz](https://github.com/j0hanz)
-
-Ashwinkarthik Selvaraj [github.com/ashwinsel](https://github.com/ashwinsel)
-
-Vital Nsengiyumva [github.com/Vinsengi](github.com/Vinsengi)
-
-Tripta Grey [github.com/tgrey2024](github.com/tgrey2024)
+- **Kiree:** [github.com/Swewi](https://github.com/Swewi)
+- **Debbie Thompson:** [github.com/debbiect246](https://github.com/debbiect246)
+- **Linus Johansson:** [github.com/j0hanz](https://github.com/j0hanz)
+- **Ashwinkarthik Selvaraj:** [github.com/ashwinsel](https://github.com/ashwinsel)
+- **Vital Nsengiyumva:** [github.com/Vinsengi](https://github.com/Vinsengi)
+- **Tripta Grey:** [github.com/tgrey2024](https://github.com/tgrey2024)
 
 ### Acknowledgements
-<!-- Add content for Acknowledgements here -->
+*Details to be added:* Recognize any mentors, organizations, or tools that helped bring this project to life.
