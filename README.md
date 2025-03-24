@@ -12,34 +12,57 @@ Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c
 
 ## Table of Contents
 
-- [User Experience](#user-experience)
-  - [Site Goals](#site-goals)
-  - [Target Users](#target-users)
-- [Design](#design)
-  - [Colour Scheme](#colour-scheme)
-  - [Fonts](#fonts)
-  - [Wireframes](#wireframes)
-- [Agile Methodology](#agile-methodology)
-  - [Kanban Board](#kanban-board)
-  - [User Stories](#user-stories)
-- [Features](#features)
-- [Testing](#testing)
-- [Bugs](#bugs)
-- [Technologies and Languages](#technologies-and-languages)
-  - [Languages Used](#languages-used)
-  - [Technologies](#technologies)
-  - [Deployment and Version Control](#deployment-and-version-control)
-  - [Styling](#styling)
-  - [Authentication](#authentication)
-  - [Tools](#tools)
-- [Deployment](#deployment)
-  - [Creating A Fork](#creating-a-fork)
-  - [Cloning Repository](#cloning-repository)
-- [Credits](#credits)
-  - [Media](#media)
-  - [Code](#code)
-  - [Contributors](#contributors)
-  - [Acknowledgements](#acknowledgements)
+- [404: Gender Gap Not Found - Inspiring the Next Generation of Women in Tech](#404-gender-gap-not-found---inspiring-the-next-generation-of-women-in-tech)
+  - [Table of Contents](#table-of-contents)
+  - [User Experience](#user-experience)
+    - [Site Goals](#site-goals)
+    - [Target Users](#target-users)
+  - [Design](#design)
+    - [Colour Scheme](#colour-scheme)
+    - [Fonts](#fonts)
+    - [Wireframes](#wireframes)
+- [](#)
+  - [Agile Methodology](#agile-methodology)
+    - [Kanban Board](#kanban-board)
+    - [User Stories](#user-stories)
+  - [Features](#features)
+    - [Header](#header)
+      - [Header Section Overview](#header-section-overview)
+    - [Structure and Design](#structure-and-design)
+      - [Background Gradient](#background-gradient)
+      - [Logo](#logo)
+      - [Navigation Links](#navigation-links)
+    - [Mobile Responsiveness](#mobile-responsiveness)
+    - [Footer](#footer)
+    - [Timeline](#timeline)
+      - [Read more](#read-more)
+      - [Honor Her - Heart](#honor-her---heart)
+    - [Tips](#tips)
+    - [Contact Mentor Form](#contact-mentor-form)
+    - [Admin Panel](#admin-panel)
+    - [Custom Error Pages](#custom-error-pages)
+    - [Future Features](#future-features)
+  - [Testing](#testing)
+    - [Manual Testing](#manual-testing)
+  - [Bugs](#bugs)
+    - [Known Bugs](#known-bugs)
+  - [Technologies and Languages](#technologies-and-languages)
+    - [Languages Used](#languages-used)
+    - [Technologies](#technologies)
+    - [Deployment and Version Control](#deployment-and-version-control)
+    - [Styling](#styling)
+    - [Authentication](#authentication)
+    - [Tools](#tools)
+  - [🛠️ Local Development Setup](#️-local-development-setup)
+    - [1️⃣ Clone the Repository](#1️⃣-clone-the-repository)
+    - [2️⃣ Install Python Dependencies](#2️⃣-install-python-dependencies)
+    - [3️⃣ Configure Environment Variables](#3️⃣-configure-environment-variables)
+    - [4️⃣ Install Tailwind CSS](#4️⃣-install-tailwind-css)
+    - [5️⃣ Apply Database Migrations](#5️⃣-apply-database-migrations)
+    - [6️⃣ Start Development Servers](#6️⃣-start-development-servers)
+  - [Deployment](#deployment)
+    - [Creating A Fork](#creating-a-fork)
+    - [Cloning Repository](#cloning-repository)
 
 ---
 
@@ -68,14 +91,14 @@ The web app strives to break barriers, close gender gaps, and cultivate a divers
 
 ![screenshot](documentation/features/colours.png)
 
-**Retro Vibe:** The design features a bold combination of Navy (`#000080`) and LightSkyBlue (`#87CEFA`) as seen in the footer gradient, evoking a nostalgic Windows 98 feel.  
-**High Contrast:** The dark navbar (`bg-gray-900`) paired with white text and borders ensures excellent readability on large screens.  
+**Retro Vibe:** The design features a bold combination of Navy (`#000080`) and LightSkyBlue (`#87CEFA`) as seen in the footer gradient, evoking a nostalgic Windows 98 feel.
+**High Contrast:** The dark navbar (`bg-gray-900`) paired with white text and borders ensures excellent readability on large screens.
 **Accent Variety:** Subtle Silver (`#C0C0C0`) accents and well-defined hover effects add visual depth without detracting from the retro aesthetic.
 
 ### Fonts
 The site uses fonts inspired by late 1990’s Web 1.0 aesthetics. In particular:
 
-**Gentium Book Basic**  
+**Gentium Book Basic**
 A timeless serif font designed for readability with elegant letterforms and extensive language support—ideal for biographies.
 
 ![Gentium Book Basic Example](https://github.com/user-attachments/assets/7a589bdb-6f04-47ea-ae07-578ec26f8ae7)
@@ -85,6 +108,7 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
 
 <details>
   <summary>Header and Footer</summary>
+<<<<<<<<< Temporary merge branch 1
   Wireframes for the site header and footer.
 </details>
 <details>
@@ -97,6 +121,26 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
   ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
   ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
   ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
+=========
+    Here are the wireframes for the site with its header and footer:
+
+
+</details>
+<details>
+  <summary>Contact a Mentor</summary>
+    Here are the wireframes for contact form for connecting with a mentor:
+
+
+
+</details>
+<details>
+  <summary>Timeline</summary>
+    Here are the wireframes for timeline:
+
+   ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
+      ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
+    ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
+>>>>>>>>> Temporary merge branch 2
 </details>
 
 ---
@@ -123,6 +167,7 @@ Below are the prioritized user stories for the current implementation:
 
 ## Features
 
+<<<<<<<<< Temporary merge branch 1
 - **Header and Footer:** Consistent branding and easy navigation.
 - **Timeline:** A retro-inspired timeline showcasing milestones of women in tech.
 - **Tips:** Practical tech tips to empower users.
@@ -130,8 +175,57 @@ Below are the prioritized user stories for the current implementation:
 - **Admin Panel:** Secure administration interface for managing content.
 - **Error Pages:** Custom-designed error pages that align with the site’s aesthetic.
 - **Future Features:** We're constantly refining our platform to better serve our community. Upcoming enhancements include more interactive timeline features, advanced mentor matching capabilities, and a wealth of new resources to empower the next generation of tech innovators. Stay tuned for regular updates as we expand our offerings and fine-tune the user experience.
+=========
+### Header
+![Header](documentation/features/header.png)
+#### Header Section Overview
+The header of this project is designed with a retro-modern and responsive layout to provide easy navigation across the site, with a touch of 1980s. It includes the following key components:
+### Structure and Design
+#### Background Gradient
+* The header has a linear gradient that transitions from a dark blue (#000080) to a light sky blue (#87CEFA), giving it a visually appealing look. The text color is white, ensuring good contrast and readability.
+#### Logo
+* The logo is placed on the left side and links to the home page. It's styled to ensure that it fits well in the header without distorting or overflowing, using a max-w-full and max-h-full approach.
+#### Navigation Links
+* The horizontal navigation menu is displayed on larger screens (medium and up, md breakpoint) with links to key pages: Home, Timeline, Mentors, Team, Login and Register. These links have hover effects for better user interaction.
+* If the user is authenticated, additional links for "Logout" and "Change Password" are displayed. Otherwise, users will see the "Login" and "Register" options.
+### Mobile Responsiveness
+* On smaller screens, the navigation links are hidden, and a hamburger menu (navbar-burger) appears.
+* When clicked, it toggles a dropdown menu (navbar-dropdown) showing the same navigation links as in the desktop version.
+* The dropdown menu is styled to appear below the hamburger button with a light background and rounded corners.
+### Footer
+![Footer](documentation/features/footer.png)
+* The footer is styled with a dark blue background (#000080), white text, and a subtle border on top.
 
----
+* The text is centered, and the font is set to a monospace style (font-mono), with a small size (text-sm).
+
+* It includes a copyright notice with the text "404 Gender Gap Not Found - Since 1900", followed by "All Rights Reserved".
+
+* This footer is fixed at the bottom of the page (mt-auto), ensuring it stays at the bottom even if content above it is not enough to fill the screen.
+
+### Timeline
+* The timeline feature is a tribute to the trailblazing women who have shaped the world of technology through their pioneering achievements, starting with the pioneer, Ada Lovelace, often hailed as the world's first computer programmer. It presents an engaging and interactive journey through history, highlighting key figures and their groundbreaking contributions to fields like computing, engineering, game design, web accessibility and more. Each entry includes a snapshot of their life, notable accomplishments and the lasting impact of their work, providing inspiration for users of all ages. By showcasing these remarkable stories, the timeline not only honours these innovators but also encourages future generations to follow in their footsteps and continue breaking barriers in tech.
+
+#### Read more
+* The user is invited to know more about any figure by clicking on the Read more button to find out more about each tech icon.
+
+#### Honor Her - Heart
+* Users can honors the women featured on our timeline by giving them a heart - clicking on the heart icon.
+
+### Tips
+### Contact Mentor Form
+* User may find a mentor from the pool of mentors on our mentors page.
+* If a user finds no matching mentor right away, the user may click on the "Find a mentor" button
+* A contact a mentor window will pop up and the user may provide his/heremial, mentor name and a message.
+* The sytem will then try to match the user with a mentor.
+### Admin Panel
+The Admin Panel is set up for the admin or superuser to access and update the data in the database.
+
+### Custom Error Pages
+<!-- Add content for Error Pages here -->
+
+### Future Features
+>>>>>>>>> Temporary merge branch 2
+
 
 ## Testing
 
@@ -181,13 +275,15 @@ Below are the prioritized user stories for the current implementation:
 - **Django AllAuth**
 
 ### Tools
+- **VS Code:** IDE for development.
+- **Balsamiq:** For wireframe creation.
+- **Canva, LogoAI:** For logo and design assets.
+- **Favicon.io:** For favicon generation.
+- **Copilot:** AI-powered code assistance.
 
-- VS Code - IDE for development
-- Balsamiq - for wireframes
-- Canva
-- LogoAI - for AI logo
-- Favicon.io - for favicons
-- Copilot - AI content generation
+---
+
+Here’s a polished, easy‑to‑read **Markdown** version of your Local Development Setup instructions:
 
 ---
 
@@ -253,6 +349,7 @@ For the smoothest workflow, open **two terminal windows**:
 Once both are running, visit http://127.0.0.1:8000 in your browser to see the app live.
 
 ---
+
 
 ## Deployment
 

@@ -1,79 +1,97 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
-{% block title %}Timeline{% endblock %}
+{% block title %}
+  Timeline
+{% endblock %}
+
 
 {% block content %}
-<ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical timeline-centered">
+  <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical timeline-centered">
     {% for event in events %}
-    <li{% if forloop.counter|divisibleby:2 %} class="timeline-shift"{% endif %}>
+      <li {% if forloop.counter|divisibleby:2 %}
+            class="timeline-shift"
+          {% endif %}>
         <div class="timeline-middle h-16">
-            <span class="flex size-8 items-center justify-center">
-                <span class="icon-[tabler--school] text-black-700 size-5"></span>
-            </span>
+          <span class="flex size-8 items-center justify-center">
+            <span class="icon-[tabler--school] text-black-700 size-5"></span>
+          </span>
         </div>
         {% if forloop.counter|divisibleby:2 %}
-        <div class="timeline-end mt-6 px-1 md:mt-8">
-            <div class="text-black-700 text-5xl font-bold">{{ event.year }}</div>
-        </div>
-        <div class="timeline-start me-4 mb-8 w-full">
-        {% else %}
-        <div class="timeline-start me-4 mt-8 max-md:pt-2">
-            <div class="text-black-700 text-5xl font-bold">{{ event.year }}</div>
-        </div>
-        <div class="timeline-end ms-4 mb-8">
-        {% endif %}
-            <div class="card">
-                <div class="card-body bg-white border-2 border-black gap-2">
-                    <!--Image -->
-                    {% if event.image %}
-                    <div class="card-image w-full">
-                        <img src="{{ event.image.url }}" alt="{{ event.event }}" class="h-40 border border-black">
-                    </div>
-                    {% endif %}
-                    <!--Title -->
-                    <h5 class="card-title mb-2.5 text-black">{{ event.event }}</h5>
-                    <!--Description-->
-                    <p class="text-black">{{ event.description|truncatechars:100 }}</p>
-                    <!--Read more button-->
-                    <div class="mt-2 ">
-                        <a href="{% url 'timeline:event_detail' event.id %}" class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">
-                            <span>Read More</span>
-                        </a>
-                    </div>
-                    {% if user.is_authenticated %}
-<!-- Honour button for logged-in users -->
-<div class="honour-container flex items-center space-x-2 mt-4">
-    <button class="honour-btn flex items-center space-x-1 text-sm"
-            data-timeline-id="{{ event.id }}"
-            data-honour-count="{{ event.honour_count }}">
-        <!-- Heart icon: filled if honoured, outline if not -->
-        {% if event.user_has_honoured %}
-        <span class="icon-[tabler--heart-filled] size-5 text-red-500"></span>
-        {% else %}
-        <span class="icon-[tabler--heart] size-5 text-gray-500"></span>
-        {% endif %}
-        <span class="honour-count ml-1 text-black text-bold font-mono">{{ event.honour_count }}</span>
-    </button>
-</div>
-{% else %}
-<!-- Honour display for non-logged-in users -->
-<div class="honour-container flex items-center space-x-2 mt-4">
-    <div class="flex items-center space-x-1 text-sm">
-        <span class="icon-[tabler--heart] size-5 text-gray-500"></span>
-        <span class="honour-count ml-1 text-black text-bold font-mono">{{ event.honour_count }}</span>
-    </div>
-</div>
-{% endif %}
-                </div>
+          <div class="timeline-end mt-6 px-1 md:mt-8">
+            <div class="text-black-700 text-5xl font-bold">
+              {{ event.year }}
             </div>
-        </div>
-        <hr class="bg-black">
-    </li>
-    {% endfor %}
-</ul>
-{% endblock %}
+          </div>
+          <div class="timeline-start me-4 mb-8 w-full">
+          {% else %}
+            <div class="timeline-start me-4 mt-8 max-md:pt-2">
+              <div class="text-black-700 text-5xl font-bold">
+                {{ event.year }}
+              </div>
+            </div>
+            <div class="timeline-end ms-4 mb-8">
+            {% endif %}
+            <div class="card">
+              <div class="card-body bg-white border-2 border-black gap-2">
+                <!--Image -->
+                {% if event.image %}
+                  <div class="card-image w-full">
+                    <img src="{{ event.image.url }}"
+                         alt="{{ event.event }}"
+                         class="h-40 border border-black" />
+                  </div>
+                {% endif %}
+                <!--Title -->
+                <h5 class="card-title mb-2.5 text-black">
+                  {{ event.event }}
+                </h5>
+                <!--Description-->
+                <p class="text-black">
+                  {{ event.description|truncatechars:100 }}
+                </p>
+                <!--Read more button-->
+                <div class="mt-2">
+                  <a href="{% url 'timeline:event_detail' event.id %}"
+                     class="px-4 py-2 border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300">
+                    <span>Read More</span>
+                  </a>
+                </div>
+                {% if user.is_authenticated %}
+                  <!-- Honour button for logged-in users -->
+                  <div class="honour-container flex items-center space-x-2 mt-4">
+                    <button class="honour-btn flex items-center space-x-1 text-sm"
+                            data-timeline-id="{{ event.id }}"
+                            data-honour-count="{{ event.honour_count }}">
+                      <!-- Heart icon: filled if honoured, outline if not -->
+                      {% if event.user_has_honoured %}
+                        <span class="icon-[tabler--heart-filled] size-5 text-red-500"></span>
+                      {% else %}
+                        <span class="icon-[tabler--heart] size-5 text-gray-500"></span>
+                      {% endif %}
+                      <span class="honour-count ml-1 text-black text-bold font-mono">{{ event.honour_count }}</span>
+                    </button>
+                  </div>
+                {% else %}
+                  <!-- Honour display for non-logged-in users -->
+                  <div class="honour-container flex items-center space-x-2 mt-4">
+                    <div class="flex items-center space-x-1 text-sm">
+                      <span class="icon-[tabler--heart] size-5 text-gray-500"></span>
+                      <span class="honour-count ml-1 text-black text-bold font-mono">{{ event.honour_count }}</span>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <hr class="bg-black" />
+        </li>
+      {% endfor %}
+    </ul>
+  {% endblock %}
 
-{% block extra_js %}
-<script src="{% static 'js/script.js' %}"></script>
-{% endblock %}
+
+  {% block extra_js %}
+    <script src="{% static 'js/script.js' %}"></script>
+  {% endblock %}

@@ -1,63 +1,80 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
-{% block title %}Contact a Mentor{% endblock %}
+{% block title %}
+  Contact a Mentor
+{% endblock %}
+
 
 {% block content %}
-<div class="container mx-auto py-8">
+  <div class="container mx-auto py-8">
     <div class="max-w-xl mx-auto">
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text">Contact a Mentor</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
-                </div>
-            </div>
-            <div class="window-body font-mono p-4">
-                <form method="post" class="p-4">
-                    {% csrf_token %}
-
-                    <div class="field-row-stacked mb-4 font-bold font-mono tracking-wide">
-                        <label for="{{ form.mentor_name.id_for_label }}">Mentor Name (optional):</label>
-                        {{ form.mentor_name }}
-                        {% if form.mentor_name.errors %}
-                            <div class="text-red-500 mt-1">
-                                {{ form.mentor_name.errors }}
-                            </div>
-                        {% endif %}
-                        <small class="text-black-600">Leave blank to be matched with any available mentor</small>
-                    </div>
-
-                    <div class="field-row-stacked mb-4 font-bold font-mono tracking-wide">
-                        <label for="{{ form.email.id_for_label }}">Your Email:</label>
-                        {{ form.email }}
-                        {% if form.email.errors %}
-                            <div class="text-red-500 mt-1">
-                                {{ form.email.errors }}
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="field-row-stacked mb-4 font-bold font-mono tracking-wide">
-                        <label for="{{ form.message.id_for_label }}">Your Message:</label>
-                        {{ form.message }}
-                        {% if form.message.errors %}
-                            <div class="text-red-500 mt-1">
-                                {{ form.message.errors }}
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <div class="field-row justify-end">
-                        <button type="submit" class="px-4 py-2 font-bold font-mono tracking-widest border-2 border-black bg-white text-black hover:bg-blue-800 hover:text-white transition duration-300">
-                            Submit Request
-                        </button>
-                    </div>
-                </form>
-            </div>
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            Contact a Mentor
+          </div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize">
+            </button>
+            <button aria-label="Maximize">
+            </button>
+            <button aria-label="Close">
+            </button>
+          </div>
         </div>
+        <div class="window-body font-mono p-4">
+          <form method="post"
+                class="p-4">
+            {% csrf_token %}
+
+            <div class="field-row-stacked mb-4 font-bold font-mono tracking-wide">
+              <label for="{{ form.mentor_name.id_for_label }}">
+                Mentor Name (optional):
+              </label>
+              {{ form.mentor_name }}
+              {% if form.mentor_name.errors %}
+                <div class="text-red-500 mt-1">
+                  {{ form.mentor_name.errors }}
+                </div>
+              {% endif %}
+              <small class="text-black-600">Leave blank to be matched with any available mentor</small>
+            </div>
+
+            <div class="field-row-stacked mb-4 font-bold font-mono tracking-wide">
+              <label for="{{ form.email.id_for_label }}">
+                Your Email:
+              </label>
+              {{ form.email }}
+              {% if form.email.errors %}
+                <div class="text-red-500 mt-1">
+                  {{ form.email.errors }}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="field-row-stacked mb-4 font-bold font-mono tracking-wide">
+              <label for="{{ form.message.id_for_label }}">
+                Your Message:
+              </label>
+              {{ form.message }}
+              {% if form.message.errors %}
+                <div class="text-red-500 mt-1">
+                  {{ form.message.errors }}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="field-row justify-end">
+              <button type="submit"
+                      class="px-4 py-2 font-bold font-mono tracking-widest border-2 border-black bg-white text-black hover:bg-blue-800 hover:text-white transition duration-300">
+                Submit Request
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 {% endblock %}
