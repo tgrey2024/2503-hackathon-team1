@@ -25,7 +25,7 @@ Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c
 ## Design
 
 ### Colour Scheme
-We draw from a palette of colours commonly found on operating systems in the 90's, taking inspiring from the cool retro colours of the Windows 98 operating system: 
+We draw from a palette of colours commonly found on operating systems in the 90's, taking inspiring from the cool retro colours of the Windows 98 operating system:
 ![Colour scheme](documentation/features/colours.png)
 
 ### Fonts
@@ -42,20 +42,20 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
 <details>
   <summary>Header and Footer</summary>
     Here are the wireframes for the site with its header and footer:
-  
+
 
 </details>
 <details>
   <summary>Contact a Mentor</summary>
     Here are the wireframes for contact form for connecting with a mentor:
-  
-  
+
+
 
 </details>
 <details>
   <summary>Timeline</summary>
     Here are the wireframes for timeline:
-  
+
    ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
       ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
     ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
@@ -115,7 +115,7 @@ The header of this project is designed with a retro-modern and responsive layout
 
 #### Read more
 * The user is invited to know more about any figure by clicking on the Read more button to find out more about each tech icon.
-  
+
 #### Honor Her - Heart
 * Users can honors the women featured on our timeline by giving them a heart - clicking on the heart icon.
 
@@ -179,6 +179,74 @@ WCAG Accessibility and Contrast checking Extension
 - LogoAI - for AI logo
 - Favicon.io - for favicons
 - Copilot - AI content generation
+
+Here’s a polished, easy‑to‑read **Markdown** version of your Local Development Setup instructions:
+
+---
+
+## 🛠️ Local Development Setup
+
+Follow these steps to get the project running on your machine.
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/tgrey2024/2503-hackathon-team1.git .
+```
+> The trailing `.` tells Git to clone into your **current directory**.
+
+---
+
+### 2️⃣ Install Python Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 3️⃣ Configure Environment Variables
+
+Create a `.env` file in the project root containing:
+
+```dotenv
+SECRET_KEY=<your_secret_key>
+DEV=1
+```
+- **SECRET_KEY**: any secure random string
+- **DEV**: enables Django’s debug mode for local development
+
+---
+
+### 4️⃣ Install Tailwind CSS
+
+```bash
+python manage.py tailwind install
+```
+
+---
+
+### 5️⃣ Apply Database Migrations
+
+```bash
+python manage.py migrate
+```
+
+---
+
+### 6️⃣ Start Development Servers
+
+For the smoothest workflow, open **two terminal windows**:
+
+| Terminal | Command                           | Purpose                         |
+| -------- | --------------------------------- | ------------------------------- |
+| 1        | `python manage.py tailwind start` | Watch & compile Tailwind CSS    |
+| 2        | `python manage.py runserver`      | Start Django development server |
+
+Once both are running, visit http://127.0.0.1:8000 in your browser to see the app live.
+
+---
+
 
 ## Deployment
 The web app is hosted on Heroku using Eco Dynos, and is deployed via the designated Github repository.
