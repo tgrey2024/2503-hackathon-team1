@@ -9,6 +9,6 @@
     to right,
     var(--primary-color),
     var(--secondary-color)
-  );
-  color: var(--text-color);
+  ) !important;
+  color: var(--text-color) !important;
 }
