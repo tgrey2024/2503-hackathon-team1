@@ -42,8 +42,8 @@
                         </a>
                     </div>
                     <!--Honour button-->
-                    <div class="honour-container flex justify-start mt-2">
-                        <button class="honour-btn btn btn-sm btn-outline bg-transparent rounded-none"
+                    <div class="honour-container flex items-center space-x-2 mt-4">
+                        <button class="honour-btn flex items-center space-x-1 text-sm {% if event.user_has_honoured %}honoured text-red-500{% else %}text-gray-500{% endif %}"
                             data-timeline-id="{{ event.id }}"
                             data-honour-count="{{ event.honour_count }}">
                             <!-- Heart icon: filled if honoured -->
