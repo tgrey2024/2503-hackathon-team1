@@ -22,7 +22,7 @@ Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c
 ## Design
 
 ### Colour Scheme
-<!-- Add content for Colour Scheme here -->
+[Colour scheme](documentation/features/colours.png)
 
 ### Fonts
 The site uses a selection of fonts inspired by Web 1.0 pages from the late 1990's:
@@ -30,7 +30,6 @@ The site uses a selection of fonts inspired by Web 1.0 pages from the late 1990'
 **Gentium Book Basic**
 This is a timeless serif font designed for readability, featuring elegant letterforms and support for a wide range of languages and scripts, making it ideal for the biographies.
 ![image](https://github.com/user-attachments/assets/7a589bdb-6f04-47ea-ae07-578ec26f8ae7)
-<!-- Add content here -->
 
 ### Wireframes
 Based on the user stories, we used Balsamiq to design the wireframes for the main UI, starting with mobile first.
@@ -38,15 +37,17 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
 <details>
   <summary>Mobile devices</summary>
     Here are the wireframes for mobile devices:
-
+    ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
 </details>
 <details>
   <summary>iPad screens</summary>
     Here are the wireframes for tablets and iPads:
+    ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
 </details>
 <details>
   <summary>Laptop and larger screens</summary>
     Here are the wireframes for larger screens and laptops:
+    ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
 
 </details>
 
@@ -70,12 +71,11 @@ Here are all the user stories that have been prioritised for the current impleme
 | Team page                                      |    must have    |  Done  |
 | Custom Error Pages                             |   should have   |  Done  |
 
-<!-- add main user stories -->
 
 ## Features
 
 ### Header
-![Header](documentation\header.png)
+![Header](documentation/features/header.png)
 #### Header Section Overview
 The header of this project is designed with a retro-modern and responsive layout to provide easy navigation across the site, with a touch of 1980s. It includes the following key components:
 ### Structure and Design
@@ -91,7 +91,7 @@ The header of this project is designed with a retro-modern and responsive layout
 * When clicked, it toggles a dropdown menu (navbar-dropdown) showing the same navigation links as in the desktop version.
 * The dropdown menu is styled to appear below the hamburger button with a light background and rounded corners.
 ### Footer
-![Footer](documentation/footer.png)
+![Footer](documentation/features/footer.png)
 * The footer is styled with a dark blue background (#000080), white text, and a subtle border on top.
 
 * The text is centered, and the font is set to a monospace style (font-mono), with a small size (text-sm).
@@ -103,7 +103,7 @@ The header of this project is designed with a retro-modern and responsive layout
 ### Timeline
 * The timeline is meant to honor the women in tech, chronologically from the woman - Ada Lovelace, often hailed as the world's first computer programmer.
 
-#### Readmore
+#### Read more
 * If a user wants to know more about any figure, the user can click on the Read more button to read more.
 #### Honor Her - Heart
 * Users can honors the women featured on our timeline by giving them a heart - clicking on the heart icon.
@@ -116,11 +116,11 @@ The header of this project is designed with a retro-modern and responsive layout
 ### Admin Panel
 The Admin Panel is set up for the admin or superuser to access and update the data in the database.
 
-### Error Pages
+### Custom Error Pages
 <!-- Add content for Error Pages here -->
 
 ### Future Features
-<!-- Add content for Future Features here -->
+
 
 ## Testing
 
@@ -185,7 +185,6 @@ The deployment process is as follows:
 12. Subsequent changes to the code will need to be pushed to the Github repo and deployed on Heroku.
 
 ## Creating A Fork
-<!-- Add content for Creating A Fork here -->
 1. On Github navigate to repository
 2. click "Fork" located towards the top right corner
 3. Select "owner" for the forked repo, from the dropdown menu under "owner" Under "Owner"
@@ -222,7 +221,7 @@ https://docs.github.com/en/repositories/creating-and-managing-repositories/cloni
 <!-- Add content for Code here -->
 
 ### Contributors
-Kiree [github.com/Swewi](https://github.com/Swewi)
+Kiree Bellamy [github.com/Swewi](https://github.com/Swewi)
 
 Debbie Thompson [github.com/debbiect246](https://github.com/debbiect246)
 
