@@ -1,4 +1,7 @@
 # 404: Gender Gap Not Found - Inspiring the Next Generation of Women in Tech
+![logo_readme](https://github.com/user-attachments/assets/090ae0dd-d384-4a29-825f-11549e6fcc10)![clippy2](https://github.com/user-attachments/assets/02fe2f36-1931-4280-ab35-01172097a8b9)
+
+
 
 ## User Experience
 
@@ -22,7 +25,8 @@ Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c
 ## Design
 
 ### Colour Scheme
-[Colour scheme](documentation/features/colours.png)
+We draw from a palette of colours commonly found on operating systems in the 90's, taking inspiring from the cool retro colours of the Windows 98 operating system: 
+![Colour scheme](documentation/features/colours.png)
 
 ### Fonts
 The site uses a selection of fonts inspired by Web 1.0 pages from the late 1990's:
@@ -34,21 +38,27 @@ This is a timeless serif font designed for readability, featuring elegant letter
 ### Wireframes
 Based on the user stories, we used Balsamiq to design the wireframes for the main UI, starting with mobile first.
 
-<details>
-  <summary>Mobile devices</summary>
-    Here are the wireframes for mobile devices:
-    ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
-</details>
-<details>
-  <summary>iPad screens</summary>
-    Here are the wireframes for tablets and iPads:
-    ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
-</details>
-<details>
-  <summary>Laptop and larger screens</summary>
-    Here are the wireframes for larger screens and laptops:
-    ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
 
+<details>
+  <summary>Header and Footer</summary>
+    Here are the wireframes for the site with its header and footer:
+  
+
+</details>
+<details>
+  <summary>Contact a Mentor</summary>
+    Here are the wireframes for contact form for connecting with a mentor:
+  
+  
+
+</details>
+<details>
+  <summary>Timeline</summary>
+    Here are the wireframes for timeline:
+  
+   ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
+      ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
+    ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
 </details>
 
 ## Agile Methodology
@@ -101,12 +111,14 @@ The header of this project is designed with a retro-modern and responsive layout
 * This footer is fixed at the bottom of the page (mt-auto), ensuring it stays at the bottom even if content above it is not enough to fill the screen.
 
 ### Timeline
-* The timeline is meant to honor the women in tech, chronologically from the woman - Ada Lovelace, often hailed as the world's first computer programmer.
+* The timeline feature is a tribute to the trailblazing women who have shaped the world of technology through their pioneering achievements, starting with the pioneer, Ada Lovelace, often hailed as the world's first computer programmer. It presents an engaging and interactive journey through history, highlighting key figures and their groundbreaking contributions to fields like computing, engineering, game design, web accessibility and more. Each entry includes a snapshot of their life, notable accomplishments and the lasting impact of their work, providing inspiration for users of all ages. By showcasing these remarkable stories, the timeline not only honours these innovators but also encourages future generations to follow in their footsteps and continue breaking barriers in tech.
 
 #### Read more
-* If a user wants to know more about any figure, the user can click on the Read more button to read more.
+* The user is invited to know more about any figure by clicking on the Read more button to find out more about each tech icon.
+  
 #### Honor Her - Heart
 * Users can honors the women featured on our timeline by giving them a heart - clicking on the heart icon.
+
 ### Tips
 ### Contact Mentor Form
 * User may find a mentor from the pool of mentors on our mentors page.
@@ -126,6 +138,7 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 
 ### Manual Testing
 <!-- Add content for Manual Testing here -->
+WCAG Accessibility and Contrast checking Extension
 
 ## Bugs
 
