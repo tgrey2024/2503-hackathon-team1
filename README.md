@@ -21,6 +21,7 @@ Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c
     - [Colour Scheme](#colour-scheme)
     - [Fonts](#fonts)
     - [Wireframes](#wireframes)
+- [](#)
   - [Agile Methodology](#agile-methodology)
     - [Kanban Board](#kanban-board)
     - [User Stories](#user-stories)
@@ -52,6 +53,13 @@ Live site: [https://team-1-8284bb86c76b.herokuapp.com/](https://team-1-8284bb86c
     - [Styling](#styling)
     - [Authentication](#authentication)
     - [Tools](#tools)
+  - [🛠️ Local Development Setup](#️-local-development-setup)
+    - [1️⃣ Clone the Repository](#1️⃣-clone-the-repository)
+    - [2️⃣ Install Python Dependencies](#2️⃣-install-python-dependencies)
+    - [3️⃣ Configure Environment Variables](#3️⃣-configure-environment-variables)
+    - [4️⃣ Install Tailwind CSS](#4️⃣-install-tailwind-css)
+    - [5️⃣ Apply Database Migrations](#5️⃣-apply-database-migrations)
+    - [6️⃣ Start Development Servers](#6️⃣-start-development-servers)
   - [Deployment](#deployment)
     - [Creating A Fork](#creating-a-fork)
     - [Cloning Repository](#cloning-repository)
@@ -80,8 +88,7 @@ The web app strives to break barriers, close gender gaps, and cultivate a divers
 ## Design
 
 ### Colour Scheme
-We draw from a palette of colours commonly found on operating systems in the 90's, taking inspiring from the cool retro colours of the Windows 98 operating system:
-![Colour scheme](documentation/features/colours.png)
+
 ![screenshot](documentation/features/colours.png)
 
 **Retro Vibe:** The design features a bold combination of Navy (`#000080`) and LightSkyBlue (`#87CEFA`) as seen in the footer gradient, evoking a nostalgic Windows 98 feel.
@@ -101,6 +108,20 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
 
 <details>
   <summary>Header and Footer</summary>
+<<<<<<<<< Temporary merge branch 1
+  Wireframes for the site header and footer.
+</details>
+<details>
+  <summary>Contact a Mentor</summary>
+  Wireframes for the contact form for connecting with a mentor.
+</details>
+<details>
+  <summary>Timeline</summary>
+  Wireframes for the timeline:
+  ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
+  ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
+  ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
+=========
     Here are the wireframes for the site with its header and footer:
 
 
@@ -119,6 +140,7 @@ Based on the user stories, we used Balsamiq to design the wireframes for the mai
    ![Timeline](documentation/wireframes/wf_timeline_mobile.png)
       ![Timeline](documentation/wireframes/wf_timeline_ipad.png)
     ![Timeline](documentation/wireframes/wf_timeline_laptop.png)
+>>>>>>>>> Temporary merge branch 2
 </details>
 
 ---
@@ -145,6 +167,15 @@ Below are the prioritized user stories for the current implementation:
 
 ## Features
 
+<<<<<<<<< Temporary merge branch 1
+- **Header and Footer:** Consistent branding and easy navigation.
+- **Timeline:** A retro-inspired timeline showcasing milestones of women in tech.
+- **Tips:** Practical tech tips to empower users.
+- **Contact Form:** An accessible way for users to get in touch.
+- **Admin Panel:** Secure administration interface for managing content.
+- **Error Pages:** Custom-designed error pages that align with the site’s aesthetic.
+- **Future Features:** We're constantly refining our platform to better serve our community. Upcoming enhancements include more interactive timeline features, advanced mentor matching capabilities, and a wealth of new resources to empower the next generation of tech innovators. Stay tuned for regular updates as we expand our offerings and fine-tune the user experience.
+=========
 ### Header
 ![Header](documentation/features/header.png)
 #### Header Section Overview
@@ -193,6 +224,7 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 <!-- Add content for Error Pages here -->
 
 ### Future Features
+>>>>>>>>> Temporary merge branch 2
 
 
 ## Testing
@@ -243,12 +275,81 @@ The Admin Panel is set up for the admin or superuser to access and update the da
 - **Django AllAuth**
 
 ### Tools
-- VS Code - IDE for development
-- Balsamiq - for wireframes
-- Canva
-- LogoAI - for AI logo
-- Favicon.io - for favicons
-- Copilot - AI content generation
+- **VS Code:** IDE for development.
+- **Balsamiq:** For wireframe creation.
+- **Canva, LogoAI:** For logo and design assets.
+- **Favicon.io:** For favicon generation.
+- **Copilot:** AI-powered code assistance.
+
+---
+
+Here’s a polished, easy‑to‑read **Markdown** version of your Local Development Setup instructions:
+
+---
+
+## 🛠️ Local Development Setup
+
+Follow these steps to get the project running on your machine.
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/tgrey2024/2503-hackathon-team1.git .
+```
+> The trailing `.` tells Git to clone into your **current directory**.
+
+---
+
+### 2️⃣ Install Python Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 3️⃣ Configure Environment Variables
+
+Create a `.env` file in the project root containing:
+
+```dotenv
+SECRET_KEY=<your_secret_key>
+DEV=1
+```
+- **SECRET_KEY**: any secure random string
+- **DEV**: enables Django’s debug mode for local development
+
+---
+
+### 4️⃣ Install Tailwind CSS
+
+```bash
+python manage.py tailwind install
+```
+
+---
+
+### 5️⃣ Apply Database Migrations
+
+```bash
+python manage.py migrate
+```
+
+---
+
+### 6️⃣ Start Development Servers
+
+For the smoothest workflow, open **two terminal windows**:
+
+| Terminal | Command                           | Purpose                         |
+| -------- | --------------------------------- | ------------------------------- |
+| 1        | `python manage.py tailwind start` | Watch & compile Tailwind CSS    |
+| 2        | `python manage.py runserver`      | Start Django development server |
+
+Once both are running, visit http://127.0.0.1:8000 in your browser to see the app live.
+
+---
+
 
 ## Deployment
 
