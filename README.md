@@ -75,7 +75,21 @@ Here are all the user stories that have been prioritised for the current impleme
 ## Features
 
 ### Header
-
+![Header](documentation\header.png)
+#### Header Section Overview
+The header of this project is designed with a retro-modern and responsive layout to provide easy navigation across the site, with a touch of 1980s. It includes the following key components:
+### Structure and Design
+#### Background Gradient
+* The header has a linear gradient that transitions from a dark blue (#000080) to a light sky blue (#87CEFA), giving it a visually appealing look. The text color is white, ensuring good contrast and readability.
+#### Logo
+* The logo is placed on the left side and links to the home page. It's styled to ensure that it fits well in the header without distorting or overflowing, using a max-w-full and max-h-full approach.
+#### Navigation Links
+* The horizontal navigation menu is displayed on larger screens (medium and up, md breakpoint) with links to key pages: Home, Timeline, Mentors, Team, Login and Register. These links have hover effects for better user interaction.
+* If the user is authenticated, additional links for "Logout" and "Change Password" are displayed. Otherwise, users will see the "Login" and "Register" options.
+### Mobile Responsiveness
+* On smaller screens, the navigation links are hidden, and a hamburger menu (navbar-burger) appears.
+* When clicked, it toggles a dropdown menu (navbar-dropdown) showing the same navigation links as in the desktop version.
+* The dropdown menu is styled to appear below the hamburger button with a light background and rounded corners.
 ### Footer
 ![Footer](documentation/footer.png)
 * The footer is styled with a dark blue background (#000080), white text, and a subtle border on top.
@@ -87,8 +101,18 @@ Here are all the user stories that have been prioritised for the current impleme
 * This footer is fixed at the bottom of the page (mt-auto), ensuring it stays at the bottom even if content above it is not enough to fill the screen.
 
 ### Timeline
+* The timeline is meant to honor the women in tech, chronologically from the woman - Ada Lovelace, often hailed as the world's first computer programmer.
+
+#### Readmore
+* If a user wants to know more about any figure, the user can click on the Read more button to read more.
+#### Honor Her - Heart
+* Users can honors the women featured on our timeline by giving them a heart - clicking on the heart icon.
 ### Tips
-### Contact Form
+### Contact Mentor Form
+* User may find a mentor from the pool of mentors on our mentors page.
+* If a user finds no matching mentor right away, the user may click on the "Find a mentor" button
+* A contact a mentor window will pop up and the user may provide his/heremial, mentor name and a message.
+* The sytem will then try to match the user with a mentor.
 ### Admin Panel
 The Admin Panel is set up for the admin or superuser to access and update the data in the database.
 
