@@ -65,6 +65,7 @@ The web app strives to break barriers, close gender gaps, and cultivate a divers
 ## Design
 
 ### Colour Scheme
+
 ![screenshot](documentation/features/colours.png)
 
 **Retro Vibe:** The design features a bold combination of Navy (`#000080`) and LightSkyBlue (`#87CEFA`) as seen in the footer gradient, evoking a nostalgic Windows 98 feel.  
@@ -180,11 +181,76 @@ Below are the prioritized user stories for the current implementation:
 - **Django AllAuth**
 
 ### Tools
-- **VS Code:** IDE for development.
-- **Balsamiq:** For wireframe creation.
-- **Canva, LogoAI:** For logo and design assets.
-- **Favicon.io:** For favicon generation.
-- **Copilot:** AI-powered code assistance.
+
+- VS Code - IDE for development
+- Balsamiq - for wireframes
+- Canva
+- LogoAI - for AI logo
+- Favicon.io - for favicons
+- Copilot - AI content generation
+
+---
+
+## 🛠️ Local Development Setup
+
+Follow these steps to get the project running on your machine.
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/tgrey2024/2503-hackathon-team1.git .
+```
+> The trailing `.` tells Git to clone into your **current directory**.
+
+---
+
+### 2️⃣ Install Python Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 3️⃣ Configure Environment Variables
+
+Create a `.env` file in the project root containing:
+
+```dotenv
+SECRET_KEY=<your_secret_key>
+DEV=1
+```
+- **SECRET_KEY**: any secure random string
+- **DEV**: enables Django’s debug mode for local development
+
+---
+
+### 4️⃣ Install Tailwind CSS
+
+```bash
+python manage.py tailwind install
+```
+
+---
+
+### 5️⃣ Apply Database Migrations
+
+```bash
+python manage.py migrate
+```
+
+---
+
+### 6️⃣ Start Development Servers
+
+For the smoothest workflow, open **two terminal windows**:
+
+| Terminal | Command                           | Purpose                         |
+| -------- | --------------------------------- | ------------------------------- |
+| 1        | `python manage.py tailwind start` | Watch & compile Tailwind CSS    |
+| 2        | `python manage.py runserver`      | Start Django development server |
+
+Once both are running, visit http://127.0.0.1:8000 in your browser to see the app live.
 
 ---
 
