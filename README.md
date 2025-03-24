@@ -75,7 +75,7 @@ Here are all the user stories that have been prioritised for the current impleme
 ## Features
 
 ### Header
-![Header](documentation\header.png)
+![Header](documentation/header.png)
 #### Header Section Overview
 The header of this project is designed with a retro-modern and responsive layout to provide easy navigation across the site, with a touch of 1980s. It includes the following key components:
 ### Structure and Design
