@@ -15,7 +15,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon_io/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon_io/favicon-16x16.png' %}">
     <title>{% block title %}Hackathon{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% tailwind_css %}
     <!-- Retro Windows 98 CSS for a nostalgic vibe -->
     <link rel="stylesheet" href="https://unpkg.com/98.css/dist/98.css" />
@@ -23,7 +22,7 @@
   </head>
 <body class="bg-stone-300/80 min-h-screen flex flex-col font-serif {% if user.is_authenticated %}user-logged-in{% endif %}">
   <!-- Navigation Bar -->
-  <header class="border-t border-black px-6 py-4 font-mono text-normal mt-auto gradient-bg">
+  <header class="border-t border-black px-6 py-4 font-mono text-normal mt-auto" style="background: linear-gradient(to right, #000080, #87CEFA); color: white;">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
       <!-- Logo / Site Title -->
       <div class="flex items-center">
@@ -82,9 +81,9 @@
       {% block content %}{% endblock %}
     </div>
   </main>
-  <footer class="footer footer-center border-t border-gray-300 shadow-md px-6 py-4 font-mono text-sm mt-auto gradient-bg">
+  <footer class="footer footer-center border-t border-gray-300 shadow-md px-6 py-4 font-mono text-sm mt-auto" style="background: linear-gradient(to right, #000080, #87CEFA); color: white;">
     <aside>
-      <p>&copy; 404 Gender Gap Not Found - Since 1900 - All rights reserved.</p>
+      <p>Copyright &copy; 404 Gender Gap Not Found - Since 1900 - All rights reserved.</p>
     </aside>
   </footer>
   {% block javascript %}
