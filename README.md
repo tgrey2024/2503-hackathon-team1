@@ -1,5 +1,5 @@
 # 404: Gender Gap Not Found - Inspiring the Next Generation of Women in Tech
-![screenshot](documentation/features/all-devices-black.png)
+![screenshot](documentation/features/responsive-all-devices-gray.png)
 
 
 **404: Gender Gap Not Found** is a groundbreaking web application dedicated to celebrating the achievements of women in technology. By showcasing inspiring stories, offering valuable tech tips, and bridging the mentorship gap, our platform aims to empower the next generation of female innovators. We envision a future where diversity and inclusion drive progress—ensuring that the gender gap in tech is a challenge of the past.
