@@ -16,4 +16,5 @@ urlpatterns = [
     path('mentors/', include('mentors.urls')),
     path('', include('home.urls')),
     path('timeline/', include('timeline.urls')),
+    path('about/', include('about.urls')),
 ]
