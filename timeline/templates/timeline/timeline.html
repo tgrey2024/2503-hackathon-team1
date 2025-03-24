@@ -36,9 +36,9 @@
                     <!--Description-->
                     <p class="text-black">{{ event.description|truncatechars:100 }}</p>
                     <!--Read more button-->
-                    <div class="mt-2">
-                        <a href="{% url 'timeline:event_detail' event.id %}" class="btn btn-sm btn-outline rounded-none">
-                            <span class="text-black">Read More</span>
+                    <div class="mt-2 ">
+                        <a href="{% url 'timeline:event_detail' event.id %}" class="btn btn-sm border-2 border-black bg-white text-black tracking-widest font-bold text-base hover:bg-blue-800 hover:text-white transition duration-300 rounded-none">
+                            <span>Read More</span>
                         </a>
                     </div>
                     <!--Honour button-->
