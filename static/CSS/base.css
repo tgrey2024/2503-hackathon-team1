@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #000080;
+  --secondary-color: #87cefa;
+  --text-color: white;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--text-color);
+}
