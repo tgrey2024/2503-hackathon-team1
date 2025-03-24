@@ -144,14 +144,17 @@ The header of this project is designed with a retro-modern and responsive layout
 ### Tips
 ### Contact Mentor Form
 * User may find a mentor from the pool of mentors on our mentors page.
-* If a user finds no matching mentor right away, the user may click on the "Find a mentor" button
-* A contact a mentor window will pop up and the user may provide his/heremial, mentor name and a message.
-* The sytem will then try to match the user with a mentor.
+* If a user finds no matching mentor right away, the user may click on the "Find a mentor" button.
+* This will trigger a new window and the user can message their preferred mentor.
+* The system will then try to match the user with a mentor.
+
 ### Admin Panel
 The Admin Panel is set up for the admin or superuser to access and update the data in the database.
 
 ### Custom Error Pages
-<!-- Add content for Error Pages here -->
+![Custom Error Page Example](documentation/features/cust-error.png)
+
+* We have custom error pages for 400, 403, 404 (example shown), and 500.
 
 ### Future Features
 
